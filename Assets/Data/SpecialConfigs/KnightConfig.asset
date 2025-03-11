@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fdccbd222954d4290e52d60dc5d73d, type: 3}
+  m_Name: KnightConfig
+  m_EditorClassIdentifier: 
+  specialName: Sovalye
+  specialCardType: 9
+  iconPrefab: {fileID: 1210154065707128885, guid: ae1c6ef78f2ea46ac8a976ec67edafc7, type: 3}
+  sprite: {fileID: -5861262659746168304, guid: 20f90d87faf1942fc977b2afc8e22113, type: 3}
+  description: sectigin puani kaybeder
+  isBeneficial: 1
+  openingSound: {fileID: 8300000, guid: 180dfb4de91eb4b11980e87c44598327, type: 3}

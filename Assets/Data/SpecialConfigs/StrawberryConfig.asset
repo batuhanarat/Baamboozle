@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fdccbd222954d4290e52d60dc5d73d, type: 3}
+  m_Name: StrawberryConfig
+  m_EditorClassIdentifier: 
+  specialName: Cilek
+  specialCardType: 10
+  iconPrefab: {fileID: 4947475023835976412, guid: d105efa0d0ce8483e869dfcf5707197c, type: 3}
+  sprite: {fileID: 1775669009216684005, guid: 95fd88c0993b347f18499aaad961df5b, type: 3}
+  description: dan puanlar al
+  isBeneficial: 1
+  openingSound: {fileID: 8300000, guid: 180dfb4de91eb4b11980e87c44598327, type: 3}

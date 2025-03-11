@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9087bcb6c9e64699a283994b737396f, type: 3}
+  m_Name: GiftCardConfig
+  m_EditorClassIdentifier: 
+  PopUpPrefab: {fileID: 228574807113099297, guid: 20223d85214ce40a2bbb894198e2a850, type: 3}
+  contentConfig: {fileID: 11400000, guid: b60d2298b6c9544c3947b36eea11cc42, type: 2}
+  cardType: 1

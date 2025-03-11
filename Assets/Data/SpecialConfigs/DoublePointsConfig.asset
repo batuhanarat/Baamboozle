@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fdccbd222954d4290e52d60dc5d73d, type: 3}
+  m_Name: DoublePointsConfig
+  m_EditorClassIdentifier: 
+  specialName: Cifte Puan
+  specialCardType: 1
+  iconPrefab: {fileID: 6634909727514671342, guid: 80a959c94b9f74d1ab947f21d389195f, type: 3}
+  sprite: {fileID: -2357659898952462716, guid: 045a6ecb17e604b9cae3522e7055f11b, type: 3}
+  description: Puaninin iki katini kazandin
+  isBeneficial: 1
+  openingSound: {fileID: 8300000, guid: 180dfb4de91eb4b11980e87c44598327, type: 3}

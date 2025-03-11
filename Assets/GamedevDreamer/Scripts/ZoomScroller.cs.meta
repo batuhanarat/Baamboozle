@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 57e32f73202e1ff419799f8caf6be78b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 255642
+  packageName: 2D Gift Boxes | Game boxes collection | Giftboxes Pack
+  packageVersion: 1.0
+  assetPath: Assets/GamedevDreamer/Scripts/ZoomScroller.cs
+  uploadId: 600011
