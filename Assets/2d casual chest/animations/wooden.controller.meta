@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 75a452cad9cb70e46b61cf8245950cb0
+timeCreated: 1486714596
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86538
+  packageName: 2d Casual Chests
+  packageVersion: 1.0
+  assetPath: Assets/2d casual chest/animations/wooden.controller
+  uploadId: 169938

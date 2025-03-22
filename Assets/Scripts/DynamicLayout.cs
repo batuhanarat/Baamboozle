@@ -1,13 +1,16 @@
 using System.Collections.Generic;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 
 public class DynamicLayout : MonoBehaviour
 {
 
+
+    [SerializeField] public GameObject animationFalan;
     [Header("UI Canvas")]
     public RectTransform panelColumn;
     public Transform Board;
-
+    private int GridSize;
     private int rowSize;
     private int columnSize;
     private const int SPEACIAL_TWEAKER = 5;
@@ -17,7 +20,6 @@ public class DynamicLayout : MonoBehaviour
 
     #region  Game Settings
 
-        [SerializeField] public int GridSize;
         [SerializeField] public QuestionType questionType;
         [SerializeField] public bool CanHaveSpecial;
 
@@ -59,6 +61,10 @@ public class DynamicLayout : MonoBehaviour
 
     #endregion
 
+    private void GetSpecials()
+    {
+
+    }
     private List<SpecialCardType> ChooseSpecials(int gridSize)
     {
         specialCount = gridSize/SPEACIAL_TWEAKER;
@@ -89,6 +95,8 @@ public class DynamicLayout : MonoBehaviour
 
     void Start()
     {
+
+        GridSize = GameSettings.GetCardSize();
         GenerateBoard();
     }
 

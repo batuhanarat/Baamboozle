@@ -4,12 +4,12 @@ public enum SpecialCardType
     BOMB,
     DOUBLE_POINTS,
     ERASER,
-    GOLD,
-    MALLET,
-    ROCKET,
-    VIRUS,
     EXCHANGE,
     GIFT,
+    GOLD,
     KNIGHT,
-    STRAWBERRY
+    MALLET,
+    ROCKET,
+    STRAWBERRY,
+    VIRUS
 }

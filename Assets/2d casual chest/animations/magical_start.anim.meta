@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b0abbcd88aa951e4fa67bcfc19e14f3a
+timeCreated: 1487095103
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86538
+  packageName: 2d Casual Chests
+  packageVersion: 1.0
+  assetPath: Assets/2d casual chest/animations/magical_start.anim
+  uploadId: 169938

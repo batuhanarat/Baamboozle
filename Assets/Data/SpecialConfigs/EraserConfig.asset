@@ -16,6 +16,6 @@ MonoBehaviour:
   specialCardType: 2
   iconPrefab: {fileID: 499464517952449943, guid: a51e1c701c30e4ef4bfafd2ac635048b, type: 3}
   sprite: {fileID: 7177831760212934264, guid: 73333cc8e0246450ebcbecf8e2c4cfb9, type: 3}
-  description: Kazandigin butun puanlar silindi
+  description: "Kazand\u0131g\u0131n b\xFCt\xFCn puanlar silindi"
   isBeneficial: 0
   openingSound: {fileID: 8300000, guid: 7d474834675f84cfda6bf8ce4d05826e, type: 3}

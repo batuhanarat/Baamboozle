@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2f380c4f66d898b41864bdb84d50f5a0
+timeCreated: 1487269794
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86538
+  packageName: 2d Casual Chests
+  packageVersion: 1.0
+  assetPath: Assets/2d casual chest/animations/card_start.anim
+  uploadId: 169938

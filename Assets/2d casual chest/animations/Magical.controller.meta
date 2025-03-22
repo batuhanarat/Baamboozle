@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1f4cd44018ae3864f8e53ebdf4c84d61
+timeCreated: 1487095104
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86538
+  packageName: 2d Casual Chests
+  packageVersion: 1.0
+  assetPath: Assets/2d casual chest/animations/Magical.controller
+  uploadId: 169938

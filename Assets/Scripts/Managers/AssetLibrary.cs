@@ -14,6 +14,7 @@ public class AssetLibrary : MonoBehaviour , IProvidable
     [SerializeField] private GameObject GiftPrefab;
     [SerializeField] private GameObject KnightPrefab;
     [SerializeField] private GameObject StrawberryPrefab;
+    [SerializeField] public GameObject ANIMATION;
 
 
 

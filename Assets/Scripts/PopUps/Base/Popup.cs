@@ -15,6 +15,7 @@ using UnityEngine.UI;
 
         private GameObject m_background;
 
+
         public void Open()
         {
             AddBackground();
@@ -36,7 +37,7 @@ using UnityEngine.UI;
         // finished, you can use an animation event instead.
         private IEnumerator RunPopupDestroy()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.8f);
             Destroy(m_background);
             Destroy(gameObject);
         }

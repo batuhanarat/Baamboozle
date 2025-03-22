@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ServiceProvider
+public static class ServiceProvider
 {
     private static readonly Dictionary<Type, IProvidable> _registerDictionary = new();
-
     public static TeamManager TeamManager => GetManager<TeamManager>();
     public static SpecialItemFactory SpecialItemFactory => GetManager<SpecialItemFactory>();
     public static AssetLibrary AssetLibrary => GetManager<AssetLibrary>();
     public static QuestionManager QuestionManager => GetManager<QuestionManager>();
-
-
-
+    public static TeamSizeSelector TeamSizeSelector => GetManager<TeamSizeSelector>();
+    public static CardSizeSelector CardSizeSelector => GetManager<CardSizeSelector>();
+    public static TimeSettingSelector TimeSettingSelector => GetManager<TimeSettingSelector>();
+    public static OptionCountSelectorForMultipleChoiceQuestion OptionCountSelectorForMultipleChoiceQuestion => GetManager<OptionCountSelectorForMultipleChoiceQuestion>();
+    public static SpecialItemSelector SpecialItemSelector => GetManager<SpecialItemSelector>();
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void InitializeServiceProvider()
@@ -26,6 +27,7 @@ public class ServiceProvider
         _ = new TeamManager();
         _ = new SpecialItemFactory();
     }
+
     private static void RegisterSceneEvents()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;

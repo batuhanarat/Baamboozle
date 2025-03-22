@@ -14,7 +14,7 @@ public class TeamUI : MonoBehaviour
     public void SetTeamNumber(int id)
     {
         var textForPlayer = id +1  ;
-        teamNameText.text = textForPlayer.ToString() +". Takim";
+        teamNameText.text = textForPlayer.ToString() +". Takım";
         if(id == 0) SetCurrentTeam();
     }
 

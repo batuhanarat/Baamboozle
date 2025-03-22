@@ -1,400 +1,400 @@
 {
-    "questions": [
-      {
-        "questionText": "Turkiye'nin baskenti neresidir?",
-        "answersText": [
-          "Istanbul",
-          "Ankara",
-          "Izmir",
-          "Bursa"
-        ],
-        "correctAnswerId": 1,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Asagidaki hayvanlardan hangisi memeli degildir?",
-        "answersText": [
-          "Kedi",
-          "Kopek",
-          "Timsah",
-          "Fil"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir meyve degildir?",
-        "answersText": [
-          "Muz",
-          "Elma",
-          "Kivi",
-          "Havuc"
-        ],
-        "correctAnswerId": 3,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Dunya'nin uydusu nedir?",
-        "answersText": [
-          "Jupiter",
-          "Ay",
-          "Gunes",
-          "Merkur"
-        ],
-        "correctAnswerId": 1,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir renk degildir?",
-        "answersText": [
-          "Kirmizi",
-          "Mavi",
-          "Yesil",
-          "Kitap"
-        ],
-        "correctAnswerId": 3,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Suyun kaynama sicakligi kac derecedir?",
-        "answersText": [
-          "0°C",
-          "50°C",
-          "100°C",
-          "200°C"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir gezegen degildir?",
-        "answersText": [
-          "Mars",
-          "Venus",
-          "Ay",
-          "Saturn"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Turkiye'nin en buyuk golu hangisidir?",
-        "answersText": [
-          "Van Golu",
-          "Tuz Golu",
-          "Beysehir Golu",
-          "Egirdir Golu"
-        ],
-        "correctAnswerId": 0,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Turkiye'nin en yuksek dagi hangisidir?",
-        "answersText": [
-          "Erciyes Dagi",
-          "Agri Dagi",
-          "Uludag",
-          "Ilgaz Dagi"
-        ],
-        "correctAnswerId": 1,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir mevsim degildir?",
-        "answersText": [
-          "Yaz",
-          "Kis",
-          "Ilkbahar",
-          "Haziran"
-        ],
-        "correctAnswerId": 3,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Insan vucudunda kac kemik vardir?",
-        "answersText": [
-          "106",
-          "206",
-          "306",
-          "406"
-        ],
-        "correctAnswerId": 1,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir muzik aleti degildir?",
-        "answersText": [
-          "Gitar",
-          "Piyano",
-          "Keman",
-          "Tabak"
-        ],
-        "correctAnswerId": 3,
-        "optionCount": 4
-      },
-      {
-        "questionText": "1 hafta kac gundur?",
-        "answersText": [
-          "5",
-          "6",
-          "7",
-          "8"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir spor dali degildir?",
-        "answersText": [
-          "Futbol",
-          "Basketbol",
-          "Yuzme",
-          "Matematik"
-        ],
-        "correctAnswerId": 3,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Istiklal Marsi'nin yazari kimdir?",
-        "answersText": [
-          "Mehmet Akif Ersoy",
-          "Yahya Kemal Beyatli",
-          "Namik Kemal",
-          "Orhan Veli"
-        ],
-        "correctAnswerId": 0,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Turkiye kac bolgeye ayrilmistir?",
-        "answersText": [
-          "5",
-          "6",
-          "7",
-          "8"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir sayi degildir?",
-        "answersText": [
-          "12",
-          "45",
-          "Masa",
-          "100"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Gunes Sistemi'nde kac gezegen vardir?",
-        "answersText": [
-          "6",
-          "7",
-          "8",
-          "9"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir tasit degildir?",
-        "answersText": [
-          "Araba",
-          "Ucak",
-          "Tren",
-          "Buzdolabi"
-        ],
-        "correctAnswerId": 3,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Ulkemizin para birimi nedir?",
-        "answersText": [
-          "Dolar",
-          "Euro",
-          "Turk Lirasi",
-          "Sterlin"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir sebze degildir?",
-        "answersText": [
-          "Havuc",
-          "Domates",
-          "Cilek",
-          "Kabak"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Insanlar nefes alirken hangi gazi kullanir?",
-        "answersText": [
-          "Oksijen",
-          "Karbondioksit",
-          "Azot",
-          "Hidrojen"
-        ],
-        "correctAnswerId": 0,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Kirmizi ve mavi renkleri karistirilinca hangi renk olusur?",
-        "answersText": [
-          "Yesil",
-          "Turuncu",
-          "Mor",
-          "Sari"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Bir yilda kac mevsim vardir?",
-        "answersText": [
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir hayvan degildir?",
-        "answersText": [
-          "Kedi",
-          "Kopek",
-          "Sandalye",
-          "Balik"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Saat kac cesit rakamdan olusur?",
-        "answersText": [
-          "10",
-          "12",
-          "24",
-          "60"
-        ],
-        "correctAnswerId": 1,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir meslek degildir?",
-        "answersText": [
-          "Doktor",
-          "Ogretmen",
-          "Muhendis",
-          "Karpuz"
-        ],
-        "correctAnswerId": 3,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Insanlarin yasadigi kita hangisidir?",
-        "answersText": [
-          "Avrupa",
-          "Asya",
-          "Afrika",
-          "Hepsi"
-        ],
-        "correctAnswerId": 3,
-        "optionCount": 4
-      },
-      {
-        "questionText": "En kucuk dogal sayi hangisidir?",
-        "answersText": [
-          "0",
-          "1",
-          "2",
-          "-1"
-        ],
-        "correctAnswerId": 1,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir icecek degildir?",
-        "answersText": [
-          "Cay",
-          "Sut",
-          "Kola",
-          "Ekmek"
-        ],
-        "correctAnswerId": 3,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Ataturk hangi yilda vefat etmistir?",
-        "answersText": [
-          "1881",
-          "1923",
-          "1938",
-          "1945"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Turkiye Cumhuriyeti hangi yil kurulmustur?",
-        "answersText": [
-          "1920",
-          "1923",
-          "1938",
-          "1945"
-        ],
-        "correctAnswerId": 1,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi bir ay degildir?",
-        "answersText": [
-          "Ocak",
-          "Subat",
-          "Sali",
-          "Kasim"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Dunya'nin sekli neye benzer?",
-        "answersText": [
-          "Kare",
-          "Dikdortgen",
-          "Kure",
-          "Silindir"
-        ],
-        "correctAnswerId": 2,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Insanin kalbi vucudunun hangi tarafindadir?",
-        "answersText": [
-          "Sag",
-          "Sol",
-          "Orta",
-          "Arkada"
-        ],
-        "correctAnswerId": 1,
-        "optionCount": 4
-      },
-      {
-        "questionText": "Hangisi en uzun zaman dilimini ifade eder?",
-        "answersText": [
-          "Ay",
-          "Hafta",
-          "Gun",
-          "Yil"
-        ],
-        "correctAnswerId": 3,
-        "optionCount": 4
-      }
-    ]
-  }
+  "questions": [
+    {
+      "questionText": "Türkiye'nin baskenti neresidir?",
+      "answersText": [
+        "İstanbul",
+        "Ankara",
+        "İzmir",
+        "Bursa"
+      ],
+      "correctAnswerId": 1,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Asagıdaki hayvanlardan hangisi memeli degildir?",
+      "answersText": [
+        "Kedi",
+        "Köpek",
+        "Timsah",
+        "Fil"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir meyve degildir?",
+      "answersText": [
+        "Muz",
+        "Elma",
+        "Kivi",
+        "Havuç"
+      ],
+      "correctAnswerId": 3,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Dünya'nın uydusu nedir?",
+      "answersText": [
+        "Jüpiter",
+        "Ay",
+        "Günes",
+        "Merkür"
+      ],
+      "correctAnswerId": 1,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir renk degildir?",
+      "answersText": [
+        "Kırmızı",
+        "Mavi",
+        "Yesil",
+        "Kitap"
+      ],
+      "correctAnswerId": 3,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Suyun kaynama sıcaklıgı kaç derecedir?",
+      "answersText": [
+        "0°C",
+        "50°C",
+        "100°C",
+        "200°C"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir gezegen degildir?",
+      "answersText": [
+        "Mars",
+        "Venüs",
+        "Ay",
+        "Satürn"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Türkiye'nin en büyük gölü hangisidir?",
+      "answersText": [
+        "Van Gölü",
+        "Tuz Gölü",
+        "Beysehir Gölü",
+        "Egirdir Gölü"
+      ],
+      "correctAnswerId": 0,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Türkiye'nin en yüksek dagı hangisidir?",
+      "answersText": [
+        "Erciyes Dagı",
+        "Agrı Dagı",
+        "Uludag",
+        "Ilgaz Dagı"
+      ],
+      "correctAnswerId": 1,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir mevsim degildir?",
+      "answersText": [
+        "Yaz",
+        "Kıs",
+        "İlkbahar",
+        "Haziran"
+      ],
+      "correctAnswerId": 3,
+      "optionCount": 4
+    },
+    {
+      "questionText": "İnsan vücudunda kaç kemik vardır?",
+      "answersText": [
+        "106",
+        "206",
+        "306",
+        "406"
+      ],
+      "correctAnswerId": 1,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir müzik aleti degildir?",
+      "answersText": [
+        "Gitar",
+        "Piyano",
+        "Keman",
+        "Tabak"
+      ],
+      "correctAnswerId": 3,
+      "optionCount": 4
+    },
+    {
+      "questionText": "1 hafta kaç gündür?",
+      "answersText": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir spor dalı degildir?",
+      "answersText": [
+        "Futbol",
+        "Basketbol",
+        "Yüzme",
+        "Matematik"
+      ],
+      "correctAnswerId": 3,
+      "optionCount": 4
+    },
+    {
+      "questionText": "İstiklal Marsı'nın yazarı kimdir?",
+      "answersText": [
+        "Mehmet Akif Ersoy",
+        "Yahya Kemal Beyatlı",
+        "Namık Kemal",
+        "Orhan Veli"
+      ],
+      "correctAnswerId": 0,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Türkiye kaç bölgeye ayrılmıstır?",
+      "answersText": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir sayı degildir?",
+      "answersText": [
+        "12",
+        "45",
+        "Masa",
+        "100"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Günes Sistemi'nde kaç gezegen vardır?",
+      "answersText": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir tasıt degildir?",
+      "answersText": [
+        "Araba",
+        "Uçak",
+        "Tren",
+        "Buzdolabı"
+      ],
+      "correctAnswerId": 3,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Ülkemizin para birimi nedir?",
+      "answersText": [
+        "Dolar",
+        "Euro",
+        "Türk Lirası",
+        "Sterlin"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir sebze degildir?",
+      "answersText": [
+        "Havuç",
+        "Domates",
+        "Çilek",
+        "Kabak"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "İnsanlar nefes alırken hangi gazı kullanır?",
+      "answersText": [
+        "Oksijen",
+        "Karbondioksit",
+        "Azot",
+        "Hidrojen"
+      ],
+      "correctAnswerId": 0,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Kırmızı ve mavi renkleri karıstırılınca hangi renk olusur?",
+      "answersText": [
+        "Yesil",
+        "Turuncu",
+        "Mor",
+        "Sarı"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Bir yılda kaç mevsim vardır?",
+      "answersText": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir hayvan degildir?",
+      "answersText": [
+        "Kedi",
+        "Köpek",
+        "Sandalye",
+        "Balık"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Saat kaç çesit rakamdan olusur?",
+      "answersText": [
+        "10",
+        "12",
+        "24",
+        "60"
+      ],
+      "correctAnswerId": 1,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir meslek degildir?",
+      "answersText": [
+        "Doktor",
+        "Ögretmen",
+        "Mühendis",
+        "Karpuz"
+      ],
+      "correctAnswerId": 3,
+      "optionCount": 4
+    },
+    {
+      "questionText": "İnsanların yasadıgı kıta hangisidir?",
+      "answersText": [
+        "Avrupa",
+        "Asya",
+        "Afrika",
+        "Hepsi"
+      ],
+      "correctAnswerId": 3,
+      "optionCount": 4
+    },
+    {
+      "questionText": "En küçük dogal sayı hangisidir?",
+      "answersText": [
+        "0",
+        "1",
+        "2",
+        "-1"
+      ],
+      "correctAnswerId": 1,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir içecek degildir?",
+      "answersText": [
+        "Çay",
+        "Süt",
+        "Kola",
+        "Ekmek"
+      ],
+      "correctAnswerId": 3,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Atatürk hangi yılda vefat etmistir?",
+      "answersText": [
+        "1881",
+        "1923",
+        "1938",
+        "1945"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Türkiye Cumhuriyeti hangi yıl kurulmustur?",
+      "answersText": [
+        "1920",
+        "1923",
+        "1938",
+        "1945"
+      ],
+      "correctAnswerId": 1,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi bir ay degildir?",
+      "answersText": [
+        "Ocak",
+        "Subat",
+        "Salı",
+        "Kasım"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Dünya'nın sekli neye benzer?",
+      "answersText": [
+        "Kare",
+        "Dikdörtgen",
+        "Küre",
+        "Silindir"
+      ],
+      "correctAnswerId": 2,
+      "optionCount": 4
+    },
+    {
+      "questionText": "İnsanın kalbi vücudunun hangi tarafındadır?",
+      "answersText": [
+        "Sag",
+        "Sol",
+        "Orta",
+        "Arkada"
+      ],
+      "correctAnswerId": 1,
+      "optionCount": 4
+    },
+    {
+      "questionText": "Hangisi en uzun zaman dilimini ifade eder?",
+      "answersText": [
+        "Ay",
+        "Hafta",
+        "Gün",
+        "Yıl"
+      ],
+      "correctAnswerId": 3,
+      "optionCount": 4
+    }
+  ]
+}

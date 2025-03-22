@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class TeamPanel : MonoBehaviour
 {
-    public int TeamCount = 4;
+    private int TeamCount = 4;
     [SerializeField] private GameObject teamPrefab;
 
     void Start()
     {
+        TeamCount = GameSettings.GetTeamSize();
+
+
         ServiceProvider.TeamManager.CreateTeams(TeamCount);
         for(int i = 1 ; i<= TeamCount ; i++)
         {

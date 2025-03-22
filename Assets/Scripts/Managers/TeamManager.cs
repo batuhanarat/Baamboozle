@@ -25,7 +25,7 @@ public class TeamManager : IProvidable
     public void AddTeam(TeamUI team, int id)
     {
         var teamIdForPlayer = id + 1;
-        team.Initialize(id, teamIdForPlayer.ToString() +".Takim " , 0);
+        team.Initialize(id, teamIdForPlayer.ToString() +".Takım " , 0);
         teams.Add(team);
         team.SetTeamNumber(id);
     }
