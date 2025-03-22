@@ -1,50 +1,32 @@
 
 using System.Collections;
 using DG.Tweening;
-using Ricimi;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CardUI : MonoBehaviour
 {
     private int _number;
-
-
-
     [SerializeField] private Sprite darkblueSprite;
     [SerializeField] private Sprite lightblueSprite;
     [SerializeField] private TMPro.TextMeshProUGUI questionNumberText;
     [SerializeField] private Image cardImage;
-
     [SerializeField] public GameObject buttonHolder;
-
     [SerializeField] public GameObject shadow;
     [SerializeField] public GameObject text;
     [SerializeField] public Sprite giftSprite;
-
     [SerializeField] public GameObject giftEffect;
     [SerializeField] public GameObject giftEffect2;
-
-
     [SerializeField] public Sprite giftPrefab;
-
     [SerializeField] public GameObject rewardObject;
-
-
     [SerializeField] public GameObject backgroundPanel;
     [SerializeField] public GameObject sparkleHolder;
     [SerializeField] public GameObject haloEffect;
-
     [SerializeField] public GameObject openButton;
-
     [SerializeField] public GameObject fireAnimation;
     [SerializeField] public GameObject firstClickedAnimation;
-
     [SerializeField] public GameObject motion;
-
     [SerializeField] public AudioClip fireSound;
-
-
     [SerializeField] private AudioClip specialClickedSound2;
 
     public void SetQuestionNumber(int number)
@@ -52,38 +34,34 @@ public class CardUI : MonoBehaviour
             _number = number;
             questionNumberText.text = number.ToString();
             SetSprite(number);
-        }
-        public void SetSprite(int number)
+    }
+    public void SetSprite(int number)
+    {
+        if(number % 2 == 0)
         {
-            if(number % 2 == 0)
-            {
-                cardImage.sprite = lightblueSprite;
-
-            }
-        }
-        public void SetForSpecialEffect()
-        {
-            // Önce mevcut sprite'ı küçültme işlemi
-
-
-
-            StartCoroutine(SetAnimationAndStuff());
+            cardImage.sprite = lightblueSprite;
 
         }
+    }
+    public void SetForSpecialEffect()
+    {
+
+        StartCoroutine(SetAnimationAndStuff());
+
+    }
 
     private IEnumerator SetAnimationAndStuff()
     {
 
 
-    firstClickedAnimation.SetActive(true);
-    yield return new WaitForSeconds(0.7f);
-    firstClickedAnimation.SetActive(false);
+        firstClickedAnimation.SetActive(true);
+        yield return new WaitForSeconds(0.7f);
+        firstClickedAnimation.SetActive(false);
 
-    // Store original scale for later restoration
-    Vector3 originalScale = buttonHolder.transform.localScale;
-    var originalSprite = cardImage.sprite;
+        // Store original scale for later restoration
+        Vector3 originalScale = buttonHolder.transform.localScale;
+        var originalSprite = cardImage.sprite;
 
-    // Step 1: Shrink the buttonHolder
 
         Sequence shrinkSequence = DOTween.Sequence();
 
@@ -95,11 +73,6 @@ public class CardUI : MonoBehaviour
         shadow.SetActive(false);
         text.SetActive(false);
 
-
-
-
-
-        // Step 2: Change the image
         cardImage.type = Image.Type.Simple;
         cardImage.sprite = giftSprite;
         var rectTransform = cardImage.GetComponent<RectTransform>();
@@ -121,7 +94,6 @@ public class CardUI : MonoBehaviour
         Vector2 originalSize = backgroundRect.sizeDelta;
         backgroundRect.sizeDelta = Vector2.zero;
 
-        // Step 3: Create a sequence with multiple animations
         Sequence mySequence = DOTween.Sequence();
 
         // First grow back to original size
@@ -130,11 +102,11 @@ public class CardUI : MonoBehaviour
 
 
         //   var audioSource  = GetComponent<AudioSource>();
-          //      audioSource.clip = specialClickedSound2; // Replace with your second audio clip variable
+        //      audioSource.clip = specialClickedSound2; // Replace with your second audio clip variable
             //    audioSource.Play();
 
 
-          yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(1.4f);
         Sequence newSequence = DOTween.Sequence();
 
 
@@ -146,107 +118,101 @@ public class CardUI : MonoBehaviour
                 .Join(backgroundRect.DOSizeDelta(originalSize, 1.3f))
         );
 
-       newSequence.OnComplete(() => {
-    // Store original scales
-    Vector3 sparkleOriginalScale = sparkleHolder.transform.localScale;
-    Vector3 haloOriginalScale = haloEffect.transform.localScale;
-    Vector3 openButtonOriginalScale = openButton.transform.localScale;
+        newSequence.OnComplete(() => {
+        Vector3 sparkleOriginalScale = sparkleHolder.transform.localScale;
+        Vector3 haloOriginalScale = haloEffect.transform.localScale;
+        Vector3 openButtonOriginalScale = openButton.transform.localScale;
 
-    // Set them active but with small initial scale
-    sparkleHolder.transform.localScale = sparkleOriginalScale * 0.2f;
-    haloEffect.transform.localScale = haloOriginalScale * 0.2f;
-    openButton.transform.localScale = openButtonOriginalScale * 0.2f;
+        sparkleHolder.transform.localScale = sparkleOriginalScale * 0.2f;
+        haloEffect.transform.localScale = haloOriginalScale * 0.2f;
+        openButton.transform.localScale = openButtonOriginalScale * 0.2f;
 
-    // Activate them
-    sparkleHolder.SetActive(true);
-    haloEffect.SetActive(true);
-    openButton.SetActive(true);
+        sparkleHolder.SetActive(true);
+        haloEffect.SetActive(true);
+        openButton.SetActive(true);
 
-    // Animate them to their original scale
-    sparkleHolder.transform.DOScale(sparkleOriginalScale, 0.5f);
-    haloEffect.transform.DOScale(haloOriginalScale, 0.5f);
-    openButton.transform.DOScale(openButtonOriginalScale, 0.5f);
-});
+        sparkleHolder.transform.DOScale(sparkleOriginalScale, 0.5f);
+        haloEffect.transform.DOScale(haloOriginalScale, 0.5f);
+        openButton.transform.DOScale(openButtonOriginalScale, 0.5f);
+    });
 
-}
-        public void OnOpenChestButtonPressed()
-        {
-            giftEffect.SetActive(true);
-            giftEffect2.SetActive(true);
-           cardImage.GetComponent<Animator>().enabled = true;
-            StartCoroutine(Wait5SecondAndOpenGift());
+    }
 
-        }
+    public void OnOpenChestButtonPressed()
+    {
+        giftEffect.SetActive(true);
+        giftEffect2.SetActive(true);
+        cardImage.GetComponent<Animator>().enabled = true;
+        StartCoroutine(Wait5SecondAndOpenGift());
+    }
 
+    private IEnumerator Wait5SecondAndOpenGift()
+    {
+        yield return new WaitForSeconds(1f);
+        //GetComponent<AudioSource>().clip = fireSound;
+        //GetComponent<AudioSource>().Play();
 
+        // Create a sequence to shrink all objects before deactivating
+        Sequence shrinkSequence = DOTween.Sequence();
 
-private IEnumerator Wait5SecondAndOpenGift()
-{
-    yield return new WaitForSeconds(1f);
-    //GetComponent<AudioSource>().clip = fireSound;
-    //GetComponent<AudioSource>().Play();
+        // Add all objects to the shrink animation
+        shrinkSequence.Join(sparkleHolder.transform.DOScale(0.1f, 0.2f));
+        shrinkSequence.Join(giftEffect.transform.DOScale(0.1f, 0.2f));
+    // shrinkSequence.Join(giftEffect2.transform.DOScale(0.1f, 0.2f));
+        shrinkSequence.Join(haloEffect.transform.DOScale(0.1f, 0.2f));
+        shrinkSequence.Join(openButton.transform.DOScale(0.1f, 0.2f));
+        //shrinkSequence.Join(motion.transform.DOScale(0.1f, 0.2f));
 
-    // Create a sequence to shrink all objects before deactivating
-    Sequence shrinkSequence = DOTween.Sequence();
-
-    // Add all objects to the shrink animation
-    shrinkSequence.Join(sparkleHolder.transform.DOScale(0.1f, 0.2f));
-    shrinkSequence.Join(giftEffect.transform.DOScale(0.1f, 0.2f));
-   // shrinkSequence.Join(giftEffect2.transform.DOScale(0.1f, 0.2f));
-    shrinkSequence.Join(haloEffect.transform.DOScale(0.1f, 0.2f));
-    shrinkSequence.Join(openButton.transform.DOScale(0.1f, 0.2f));
-    //shrinkSequence.Join(motion.transform.DOScale(0.1f, 0.2f));
-
-    // Wait for the shrink animation to complete
-    yield return shrinkSequence.WaitForCompletion();
+        // Wait for the shrink animation to complete
+        yield return shrinkSequence.WaitForCompletion();
 
 
-    // Now deactivate all objects
-    sparkleHolder.SetActive(false);
-    giftEffect.SetActive(false);
-    giftEffect2.SetActive(false);
-    haloEffect.SetActive(false);
-    openButton.SetActive(false);
-    motion.SetActive(false);
+        // Now deactivate all objects
+        sparkleHolder.SetActive(false);
+        giftEffect.SetActive(false);
+        giftEffect2.SetActive(false);
+        haloEffect.SetActive(false);
+        openButton.SetActive(false);
+        motion.SetActive(false);
 
-    // Reset scales for future use
-    sparkleHolder.transform.localScale = Vector3.one;
-    giftEffect.transform.localScale = Vector3.one;
-    giftEffect2.transform.localScale = Vector3.one;
-    haloEffect.transform.localScale = Vector3.one;
-    openButton.transform.localScale = Vector3.one;
-    motion.transform.localScale = Vector3.one;
+        // Reset scales for future use
+        sparkleHolder.transform.localScale = Vector3.one;
+        giftEffect.transform.localScale = Vector3.one;
+        giftEffect2.transform.localScale = Vector3.one;
+        haloEffect.transform.localScale = Vector3.one;
+        openButton.transform.localScale = Vector3.one;
+        motion.transform.localScale = Vector3.one;
 
-    // Activate fire animation
-   // fireAnimation.SetActive(true);
-//yield return new WaitForSeconds(0.5F);
-    // Get the Animator component
-    //Animator animator = fireAnimation.GetComponent<Animator>();
+        // Activate fire animation
+        // fireAnimation.SetActive(true);
+     //yield return new WaitForSeconds(0.5F);
+        // Get the Animator component
+        //Animator animator = fireAnimation.GetComponent<Animator>();
 
-    // Wait for the animation to complete
-   // yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f);
+        // Wait for the animation to complete
+        // yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f);
 
-    // Deactivate fire animation
-    //fireAnimation.SetActive(false);
+        // Deactivate fire animation
+        //fireAnimation.SetActive(false);
 
-    GetComponent<QuestionPopupOpener>().DecideWhatToDo();
-}
+        GetComponent<QuestionPopupOpener>().DecideWhatToDo();
+    }
 
-        public void DeactivateCard()
-        {
-            shadow.SetActive(false);
-            buttonHolder.SetActive(false);
-            text.SetActive(false);
-            backgroundPanel.SetActive(false);
+    public void DeactivateCard()
+    {
+        shadow.SetActive(false);
+        buttonHolder.SetActive(false);
+        text.SetActive(false);
+        backgroundPanel.SetActive(false);
 
-            sparkleHolder.SetActive(false);
-            haloEffect.SetActive(false);
-            giftEffect.SetActive(false);
-            giftEffect2.SetActive(false);
-            openButton.SetActive(false);
+        sparkleHolder.SetActive(false);
+        haloEffect.SetActive(false);
+        giftEffect.SetActive(false);
+        giftEffect2.SetActive(false);
+        openButton.SetActive(false);
 
 
-        }
+    }
 
     public void SetField(IConfig specialConfig,CardType cardType, GameObject questionPopup)
     {

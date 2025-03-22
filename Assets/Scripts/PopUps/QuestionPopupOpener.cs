@@ -52,7 +52,6 @@ using UnityEngine;
                 if(counter == 1)
                 {
                     GetComponent<AudioSource>().clip =  popUpOpeningSound;
-                    Debug.Log("COUNTER 1");
                     GetComponent<AudioSource>().Play();
                     OpenPopUpWithAnimation();
                 } else

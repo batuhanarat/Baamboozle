@@ -64,7 +64,6 @@ public class TeamManager : IProvidable
         teamIndex++;
         teamIndex %= teamCount;
         GetActiveTeam().SetCurrentTeam();
-
     }
 
     public TeamUI GetTopTeam()
