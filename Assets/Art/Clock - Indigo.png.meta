@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Clock - Indigo_0: -9145806727288999826
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

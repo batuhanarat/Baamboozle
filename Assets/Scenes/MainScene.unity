@@ -641,10 +641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8450745b2c20b4d54a36545c4ab47048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingsPanel: {fileID: 0}
-  "\xF6zelYetenekPaneli": {fileID: 0}
-  soruPaneli: {fileID: 0}
-  "s\xFCrePaneli": {fileID: 0}
   popupPrefab: {fileID: 3781352449510677768, guid: 9f068472e1f564d1b8a84410d6291075, type: 3}
 --- !u!1 &659856066
 GameObject:
@@ -701,10 +697,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8450745b2c20b4d54a36545c4ab47048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingsPanel: {fileID: 0}
-  "\xF6zelYetenekPaneli": {fileID: 0}
-  soruPaneli: {fileID: 0}
-  "s\xFCrePaneli": {fileID: 0}
   popupPrefab: {fileID: 0}
 --- !u!82 &659856069
 AudioSource:

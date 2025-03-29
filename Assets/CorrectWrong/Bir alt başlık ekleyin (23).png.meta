@@ -1,0 +1,602 @@
+fileFormatVersion: 2
+guid: 17222cb6ff6100e40a74b78946f31090
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7635436847695368226
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_0"
+  - first:
+      213: -4653593412361343343
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_1"
+  - first:
+      213: -7864543955071027756
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_2"
+  - first:
+      213: -1110803431184099953
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_3"
+  - first:
+      213: -7018144190324335071
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_4"
+  - first:
+      213: 5510392964620275050
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_5"
+  - first:
+      213: 2920724399156803000
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_6"
+  - first:
+      213: -2228879692150791437
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_7"
+  - first:
+      213: -5669511015378764933
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_8"
+  - first:
+      213: 3461906663809795937
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_9"
+  - first:
+      213: -8463624060580342986
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_10"
+  - first:
+      213: -2193823150951881221
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_11"
+  - first:
+      213: 4190978492073877793
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_12"
+  - first:
+      213: 185495585081227680
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_13"
+  - first:
+      213: -4796000782058648719
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_14"
+  - first:
+      213: -5702178056773254566
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_15"
+  - first:
+      213: 3237055311291219067
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_16"
+  - first:
+      213: -3632175597211250962
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_17"
+  - first:
+      213: 7607586653331244295
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_18"
+  - first:
+      213: 4312608774721453717
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_19"
+  - first:
+      213: -4277478483993442965
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_20"
+  - first:
+      213: 4228905703434474618
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_21"
+  - first:
+      213: -1127924938145239450
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_22"
+  - first:
+      213: 5121117759418778139
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_23"
+  - first:
+      213: 7253281817575897640
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_24"
+  - first:
+      213: -7696038775430892982
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_25"
+  - first:
+      213: -4234778765412910742
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_26"
+  - first:
+      213: 2893027818382714093
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_27"
+  - first:
+      213: 930715128215433855
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_28"
+  - first:
+      213: -1033451509012658349
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_29"
+  - first:
+      213: -7479666296310233241
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_30"
+  - first:
+      213: 9007620779584731642
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_31"
+  - first:
+      213: -4275855364713980415
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_32"
+  - first:
+      213: 1005758030595167849
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_33"
+  - first:
+      213: -6555303997132800525
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_34"
+  - first:
+      213: 1418089254333024385
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_35"
+  - first:
+      213: -8230115744707751400
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_36"
+  - first:
+      213: 9220058101000477366
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_37"
+  - first:
+      213: 7064669881524367419
+    second: "Bir alt ba\u015Fl\u0131k ekleyin (23)_38"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_0"
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1247
+        width: 158
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf603c24aa790690800000000000000
+      internalID: -7635436847695368226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_1"
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1248
+        width: 158
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19eaa1f727d1b6fb0800000000000000
+      internalID: -4653593412361343343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_2"
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 839
+        width: 272
+        height: 421
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d5bb85e0f68bd290800000000000000
+      internalID: -7864543955071027756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_3"
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 1259
+        width: 189
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f859cf42a22a590f0800000000000000
+      internalID: -1110803431184099953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_4"
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 1260
+        width: 187
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e1f39ea0b8a9e90800000000000000
+      internalID: -7018144190324335071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_5"
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 1248
+        width: 253
+        height: 413
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6dc00db439d87c40800000000000000
+      internalID: 5510392964620275050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_6"
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 832
+        width: 252
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5be8acd5f788820800000000000000
+      internalID: 2920724399156803000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_7"
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 413
+        width: 248
+        height: 423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f22546aabd6111e0800000000000000
+      internalID: -2228879692150791437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_8"
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 414
+        width: 275
+        height: 423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b3f2615c9d151b0800000000000000
+      internalID: -5669511015378764933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_9"
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 400
+        width: 264
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167c0fdc4c92b0030800000000000000
+      internalID: 3461906663809795937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_11"
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 412
+        width: 265
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf52c73b779fd81e0800000000000000
+      internalID: -2193823150951881221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_13"
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 832
+        width: 254
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a97b287043039200800000000000000
+      internalID: 185495585081227680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_14"
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 830
+        width: 255
+        height: 417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b06e2f2be217db0800000000000000
+      internalID: -4796000782058648719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_10"
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 841
+        width: 292
+        height: 411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150378f504493a043a7acd840b91e484
+      internalID: -501035550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_12"
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 417
+        width: 295
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb4215c011f10045aa8d978d64507f3
+      internalID: 1103107332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bir alt ba\u015Fl\u0131k ekleyin (23)_15"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 7
+        width: 297
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ad5e37099902143a0f72b2c7fd7baa
+      internalID: -411821315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1fa1d9c79ac990a4cbff9f7fb9a62894
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Bir alt ba\u015Fl\u0131k ekleyin (23)_10": -501035550
+      "Bir alt ba\u015Fl\u0131k ekleyin (23)_12": 1103107332
+      "Bir alt ba\u015Fl\u0131k ekleyin (23)_15": -411821315
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
