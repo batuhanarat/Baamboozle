@@ -15,6 +15,11 @@ public class MultipleQuestionPopUp : QuestionPopUp
     [SerializeField] public Transform buttonHolder;
     [SerializeField] public AudioClip trueSound;
     [SerializeField] public AudioClip falseSound;
+    [SerializeField] public GameObject Correct;
+    [SerializeField] public GameObject Wrong;
+    private Color originalOptionColor = new Color(1f, 1f, 1f, 1f); // beyaz (varsayılan)
+
+
 
     private QuestionConfig questionConfig;
     private MultipleQuestion multipleQuestion;
@@ -128,27 +133,38 @@ public class MultipleQuestionPopUp : QuestionPopUp
 
     public void OnOptionPressed(int optionId)
     {
-        var point = decreasingScore ?  questionPoint : questionPointStandart;
+        // Butona basılır basılmaz tüm opsiyonları devre dışı bıraktım. Buglar vardı.
+        foreach (var optionButton in options)
+        {
+            optionButton.interactable = false;
+        }
 
-        if(optionId == trueQuestionId)
+        if (optionId == trueQuestionId)
         {
             var team = ServiceProvider.TeamManager.GetActiveTeam();
             team.UpdateScore(point);
             var source  = GetComponent<AudioSource>();
             source.clip = trueSound;
             source.Play();
-        } else
+            Correct.SetActive(true);
+            Correct.GetComponent<Animator>().SetTrigger("CorrectTrigger");
+        }
+        else
         {
             var team = ServiceProvider.TeamManager.GetActiveTeam();
             team.UpdateScore(-point);
             var source  = GetComponent<AudioSource>();
             source.clip = falseSound;
             source.Play();
+            Wrong.SetActive(true);
+            Wrong.GetComponent<Animator>().SetTrigger("WrongTrigger");
         }
         ServiceProvider.TeamManager.ChangeTeam();
         ServiceProvider.ScoreManager.DecreaseCard();
 
-        card.DeactivateCard();
+    public void AfterOnOptionPressed(){
+        ServiceProvider.TeamManager.ChangeTeam();
+        card.DeactivateCard(); //ekranda bir şey kalıyorsa onları temizleriz
         Close();
     }
 

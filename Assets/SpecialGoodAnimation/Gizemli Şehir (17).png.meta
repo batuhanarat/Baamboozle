@@ -1,0 +1,589 @@
+fileFormatVersion: 2
+guid: 48e6813e70f1cc24b80b2c5077c98c4d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5235257742649738999
+    second: "Gizemli \u015Eehir (17)_0"
+  - first:
+      213: 3462817295878902286
+    second: "Gizemli \u015Eehir (17)_1"
+  - first:
+      213: -9213226458772245392
+    second: "Gizemli \u015Eehir (17)_2"
+  - first:
+      213: 3051027074687543777
+    second: "Gizemli \u015Eehir (17)_3"
+  - first:
+      213: -4821945500549517349
+    second: "Gizemli \u015Eehir (17)_4"
+  - first:
+      213: -1232679860055410916
+    second: "Gizemli \u015Eehir (17)_5"
+  - first:
+      213: 6645386235387883418
+    second: "Gizemli \u015Eehir (17)_6"
+  - first:
+      213: -4654372212836674835
+    second: "Gizemli \u015Eehir (17)_7"
+  - first:
+      213: -4211221844807581158
+    second: "Gizemli \u015Eehir (17)_8"
+  - first:
+      213: -3038729531945210821
+    second: "Gizemli \u015Eehir (17)_9"
+  - first:
+      213: -2573124087074207456
+    second: "Gizemli \u015Eehir (17)_10"
+  - first:
+      213: 36955889437619703
+    second: "Gizemli \u015Eehir (17)_11"
+  - first:
+      213: -6707920998251659333
+    second: "Gizemli \u015Eehir (17)_12"
+  - first:
+      213: 7244650533019705850
+    second: "Gizemli \u015Eehir (17)_13"
+  - first:
+      213: 5088498650502129459
+    second: "Gizemli \u015Eehir (17)_14"
+  - first:
+      213: -7046937770779036297
+    second: "Gizemli \u015Eehir (17)_15"
+  - first:
+      213: -8234692520502533900
+    second: "Gizemli \u015Eehir (17)_16"
+  - first:
+      213: -3848043692033270935
+    second: "Gizemli \u015Eehir (17)_17"
+  - first:
+      213: 5062226746259181882
+    second: "Gizemli \u015Eehir (17)_18"
+  - first:
+      213: -5896647713259489204
+    second: "Gizemli \u015Eehir (17)_19"
+  - first:
+      213: 7009027438020150502
+    second: "Gizemli \u015Eehir (17)_20"
+  - first:
+      213: 4856931965654292712
+    second: "Gizemli \u015Eehir (17)_21"
+  - first:
+      213: 2291489487825406935
+    second: "Gizemli \u015Eehir (17)_22"
+  - first:
+      213: 6059649062550656186
+    second: "Gizemli \u015Eehir (17)_23"
+  - first:
+      213: 6320710554970559682
+    second: "Gizemli \u015Eehir (17)_24"
+  - first:
+      213: 1187409177589210719
+    second: "Gizemli \u015Eehir (17)_25"
+  - first:
+      213: -2169217206890263554
+    second: "Gizemli \u015Eehir (17)_26"
+  - first:
+      213: 6178097415679643829
+    second: "Gizemli \u015Eehir (17)_27"
+  - first:
+      213: 2714942869954851789
+    second: "Gizemli \u015Eehir (17)_28"
+  - first:
+      213: -6784485353301055901
+    second: "Gizemli \u015Eehir (17)_29"
+  - first:
+      213: 575480195190291108
+    second: "Gizemli \u015Eehir (17)_30"
+  - first:
+      213: -810810353843743113
+    second: "Gizemli \u015Eehir (17)_31"
+  - first:
+      213: -6447427243294645089
+    second: "Gizemli \u015Eehir (17)_32"
+  - first:
+      213: 4550900949314099137
+    second: "Gizemli \u015Eehir (17)_33"
+  - first:
+      213: 4485446907810988314
+    second: "Gizemli \u015Eehir (17)_34"
+  - first:
+      213: -5930348322465785175
+    second: "Gizemli \u015Eehir (17)_35"
+  - first:
+      213: 5164152369702651643
+    second: "Gizemli \u015Eehir (17)_36"
+  - first:
+      213: -3517182928432662627
+    second: "Gizemli \u015Eehir (17)_37"
+  - first:
+      213: -747949203458421096
+    second: "Gizemli \u015Eehir (17)_38"
+  - first:
+      213: 5865645932321495986
+    second: "Gizemli \u015Eehir (17)_39"
+  - first:
+      213: -399349265978988288
+    second: "Gizemli \u015Eehir (17)_40"
+  - first:
+      213: 7165820334923424113
+    second: "Gizemli \u015Eehir (17)_41"
+  - first:
+      213: -1943658415957592076
+    second: "Gizemli \u015Eehir (17)_42"
+  - first:
+      213: -6932481974379750286
+    second: "Gizemli \u015Eehir (17)_43"
+  - first:
+      213: -7366486348986568132
+    second: "Gizemli \u015Eehir (17)_44"
+  - first:
+      213: 1788579284629290008
+    second: "Gizemli \u015Eehir (17)_45"
+  - first:
+      213: -6689178013369699895
+    second: "Gizemli \u015Eehir (17)_46"
+  - first:
+      213: -2529986275903637069
+    second: "Gizemli \u015Eehir (17)_47"
+  - first:
+      213: -1897265233552519620
+    second: "Gizemli \u015Eehir (17)_48"
+  - first:
+      213: -745710181995009935
+    second: "Gizemli \u015Eehir (17)_49"
+  - first:
+      213: -1975799142602881519
+    second: "Gizemli \u015Eehir (17)_50"
+  - first:
+      213: -6763776768690841039
+    second: "Gizemli \u015Eehir (17)_51"
+  - first:
+      213: -5703182231426919700
+    second: "Gizemli \u015Eehir (17)_52"
+  - first:
+      213: -1558561841827753962
+    second: "Gizemli \u015Eehir (17)_53"
+  - first:
+      213: 3232361587841738616
+    second: "Gizemli \u015Eehir (17)_54"
+  - first:
+      213: -893812667879774766
+    second: "Gizemli \u015Eehir (17)_55"
+  - first:
+      213: 4280311642501026806
+    second: "Gizemli \u015Eehir (17)_56"
+  - first:
+      213: 9025292393549137136
+    second: "Gizemli \u015Eehir (17)_57"
+  - first:
+      213: 8192120896639329116
+    second: "Gizemli \u015Eehir (17)_58"
+  - first:
+      213: -7193405786166023832
+    second: "Gizemli \u015Eehir (17)_59"
+  - first:
+      213: -7948818595446658933
+    second: "Gizemli \u015Eehir (17)_60"
+  - first:
+      213: 9218377882071269074
+    second: "Gizemli \u015Eehir (17)_61"
+  - first:
+      213: -6526700638628640406
+    second: "Gizemli \u015Eehir (17)_62"
+  - first:
+      213: 6840542965098057954
+    second: "Gizemli \u015Eehir (17)_63"
+  - first:
+      213: -1343395986474579654
+    second: "Gizemli \u015Eehir (17)_64"
+  - first:
+      213: 955161610506634137
+    second: "Gizemli \u015Eehir (17)_65"
+  - first:
+      213: -2675385793655540068
+    second: "Gizemli \u015Eehir (17)_66"
+  - first:
+      213: 2411862384104698682
+    second: "Gizemli \u015Eehir (17)_67"
+  - first:
+      213: -1301078431919984473
+    second: "Gizemli \u015Eehir (17)_68"
+  - first:
+      213: 5659395429042740226
+    second: "Gizemli \u015Eehir (17)_69"
+  - first:
+      213: 9096509367277393150
+    second: "Gizemli \u015Eehir (17)_70"
+  - first:
+      213: -1528356825570797726
+    second: "Gizemli \u015Eehir (17)_71"
+  - first:
+      213: -1116438139751624716
+    second: "Gizemli \u015Eehir (17)_72"
+  - first:
+      213: 5747504513184697886
+    second: "Gizemli \u015Eehir (17)_73"
+  - first:
+      213: 1707554982927075906
+    second: "Gizemli \u015Eehir (17)_74"
+  - first:
+      213: -7295354229228599251
+    second: "Gizemli \u015Eehir (17)_75"
+  - first:
+      213: -1080724860387309166
+    second: "Gizemli \u015Eehir (17)_76"
+  - first:
+      213: -1433351717957922341
+    second: "Gizemli \u015Eehir (17)_77"
+  - first:
+      213: 9073122171810726666
+    second: "Gizemli \u015Eehir (17)_78"
+  - first:
+      213: -5640210366959137115
+    second: "Gizemli \u015Eehir (17)_79"
+  - first:
+      213: 5657741274471721179
+    second: "Gizemli \u015Eehir (17)_80"
+  - first:
+      213: -7484576003554208416
+    second: "Gizemli \u015Eehir (17)_81"
+  - first:
+      213: 6747566715465525313
+    second: "Gizemli \u015Eehir (17)_82"
+  - first:
+      213: -1079838971875729933
+    second: "Gizemli \u015Eehir (17)_83"
+  - first:
+      213: 1276354320988147590
+    second: "Gizemli \u015Eehir (17)_84"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Gizemli \u015Eehir (17)_0"
+      rect:
+        serializedVersion: 2
+        x: 2375
+        y: 2572
+        width: 688
+        height: 706
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909bfb512d0a857b0800000000000000
+      internalID: -5235257742649738999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gizemli \u015Eehir (17)_2"
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 2718
+        width: 347
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07476a9795b042080800000000000000
+      internalID: -9213226458772245392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gizemli \u015Eehir (17)_3"
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 2663
+        width: 540
+        height: 488
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e9a9da95fc675a20800000000000000
+      internalID: 3051027074687543777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gizemli \u015Eehir (17)_6"
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1471
+        width: 941
+        height: 863
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9fa0938297293c50800000000000000
+      internalID: 6645386235387883418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gizemli \u015Eehir (17)_7"
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 1407
+        width: 964
+        height: 969
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de2db61e129586fb0800000000000000
+      internalID: -4654372212836674835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gizemli \u015Eehir (17)_4"
+      rect:
+        serializedVersion: 2
+        x: 2333
+        y: 1447
+        width: 898
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178c7967b9a58854eb049ffe1e605c1c
+      internalID: 803480177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gizemli \u015Eehir (17)_8"
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 278
+        width: 1015
+        height: 949
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8f60b2fa39ac24a901bd37e2ef4212
+      internalID: 1237857193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gizemli \u015Eehir (17)_9"
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 241
+        width: 1034
+        height: 1000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f1311962cb7964397a08d933b257d1
+      internalID: 987680936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gizemli \u015Eehir (17)_10"
+      rect:
+        serializedVersion: 2
+        x: 2283
+        y: 239
+        width: 1016
+        height: 1007
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b82f2e38c06f404ea376cfc4f109a7a
+      internalID: -1516988572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ba51979f35753784c912329152cdc7c0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Gizemli \u015Eehir (17)_1": 1271962102
+      "Gizemli \u015Eehir (17)_10": -1516988572
+      "Gizemli \u015Eehir (17)_4": 803480177
+      "Gizemli \u015Eehir (17)_5": 2055668905
+      "Gizemli \u015Eehir (17)_8": 1237857193
+      "Gizemli \u015Eehir (17)_9": 987680936
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

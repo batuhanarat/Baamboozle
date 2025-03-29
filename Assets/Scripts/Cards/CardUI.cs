@@ -1,12 +1,15 @@
 
 using System.Collections;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CardUI : MonoBehaviour
 {
+    
     private int _number;
+    private bool _isBeneficial;
     [SerializeField] private Sprite darkblueSprite;
     [SerializeField] private Sprite lightblueSprite;
     [SerializeField] private TMPro.TextMeshProUGUI questionNumberText;
@@ -28,6 +31,24 @@ public class CardUI : MonoBehaviour
     [SerializeField] public GameObject motion;
     [SerializeField] public AudioClip fireSound;
     [SerializeField] private AudioClip specialClickedSound2;
+    [SerializeField] public GameObject SpecialGoodAnim;
+    [SerializeField] public GameObject SpecialBadAnim;    
+    [SerializeField] public GameObject Sparkle;
+    [SerializeField] public GameObject Chest1;
+    [SerializeField] public GameObject Chest3;
+    [SerializeField] public GameObject Chest1_Original;
+    [SerializeField] public GameObject Chest3_Original;
+    [SerializeField] public GameObject Chest_Manager;
+    [SerializeField] public GameObject QuestionNumber;
+    [SerializeField] public GameObject Lock1;
+    [SerializeField] public GameObject Lock3;
+    [SerializeField] public AudioClip BombSoundGood;
+    [SerializeField] public AudioClip BombSoundBad;
+    [SerializeField] public AudioClip GoodSound;
+    [SerializeField] public AudioClip BadSound;
+    [SerializeField] public AudioClip WindSound;
+    [SerializeField] public AudioClip FallingSound;
+
 
     public void SetQuestionNumber(int number)
     {
@@ -43,17 +64,17 @@ public class CardUI : MonoBehaviour
 
         }
     }
-    public void SetForSpecialEffect()
+    /*public void SetForSpecialEffect()
     {
 
         StartCoroutine(SetAnimationAndStuff());
 
-    }
+    }*/
 
-    private IEnumerator SetAnimationAndStuff()
+    /*private IEnumerator SetAnimationAndStuff()
     {
 
-
+        //Debug.Log("Buraya girdi ilk tıklanıldığında");
         firstClickedAnimation.SetActive(true);
         yield return new WaitForSeconds(0.7f);
         firstClickedAnimation.SetActive(false);
@@ -68,6 +89,7 @@ public class CardUI : MonoBehaviour
         // Add all objects to the shrink animation
         shrinkSequence.Join(text.transform.DOScale(0.1f, 0.25f));
         shrinkSequence.Join(shadow.transform.DOScale(0.1f, 0.25f));
+        shrinkSequence.Join(buttonHolder.transform.DOScale(0.2f, 0.25f));
         shrinkSequence.Join(buttonHolder.transform.DOScale(0.2f, 0.25f));
         yield return shrinkSequence.WaitForCompletion();
         shadow.SetActive(false);
@@ -136,9 +158,10 @@ public class CardUI : MonoBehaviour
         openButton.transform.DOScale(openButtonOriginalScale, 0.5f);
     });
 
-    }
+    }*/
 
-    public void OnOpenChestButtonPressed()
+
+    /*public void OnOpenChestButtonPressed()
     {
         giftEffect.SetActive(true);
         giftEffect2.SetActive(true);
@@ -196,7 +219,7 @@ public class CardUI : MonoBehaviour
         //fireAnimation.SetActive(false);
 
         GetComponent<QuestionPopupOpener>().DecideWhatToDo();
-    }
+    }*/
 
     public void DeactivateCard()
     {
@@ -213,6 +236,222 @@ public class CardUI : MonoBehaviour
 
 
     }
+    
+    public void PlayEntranceAnimation(bool isBeneficial)
+    {
+        _isBeneficial = isBeneficial;
+
+        if (isBeneficial)
+        {
+            SpecialGoodAnimation();
+            BombAudioForGood();
+        }
+        else
+        {
+            SpecialBadAnimation();
+            BombAudioForBad();
+        }
+    }
+    
+    public void ButtonDestroyed(){
+        buttonHolder.SetActive(false);
+        QuestionNumber.SetActive(false);
+    }
+
+    public void PanelOpened()
+    {
+        // Sahnedeki ana Canvas'ı bul
+        GameObject mainCanvas = GameObject.Find("Canvas");
+        
+        if (mainCanvas != null && backgroundPanel != null)
+        {
+            backgroundPanel.transform.SetParent(mainCanvas.transform, false);
+            RectTransform rect = backgroundPanel.GetComponent<RectTransform>();
+            rect.anchorMin = new Vector2(0, 0);
+            rect.anchorMax = new Vector2(1, 1);
+            rect.pivot = new Vector2(0.5f, 0.5f);
+            rect.anchoredPosition = Vector2.zero;
+            rect.sizeDelta = Vector2.zero;
+
+            backgroundPanel.SetActive(true);
+
+            SparkleAnimation();
+
+        }
+        else
+        {
+            Debug.LogWarning("Main Canvas veya backgroundPanel bulunamadı!");
+        }
+    }
+
+    public void PopupOpened()
+    {
+        Debug.Log("tetiklendim1");
+        GetComponent<QuestionPopupOpener>().OpenPopUpWithAnimation();
+
+        StartCoroutine(DisableLocksAfterDelay());
+    }
+
+    private IEnumerator DisableLocksAfterDelay()
+    {
+        yield return new WaitForSeconds(1.3f);
+
+        if (Lock1 != null)
+            Lock1.SetActive(false);
+
+        if (Lock3 != null)
+            Lock3.SetActive(false);
+    }
+
+    public void SpecialGoodAnimation(){
+        SpecialGoodAnim.SetActive(true);
+        SpecialGoodAnim.GetComponent<Animator>().SetTrigger("GoodAnimTrigger");
+    }
+
+    public void SpecialBadAnimation(){
+        SpecialBadAnim.SetActive(true);
+        SpecialBadAnim.GetComponent<Animator>().SetTrigger("BadAnimTrigger");
+    }
+
+    public void SparkleAnimation()
+    {
+        // Mevcut animasyonları kapat
+        SpecialGoodAnim.SetActive(false);
+        SpecialBadAnim.SetActive(false);
+
+        // 1) Butonun dünya (world) pozisyonunu al
+        Vector3 buttonWorldPos = buttonHolder.transform.position;
+
+        Sparkle.SetActive(true);
+
+        // 3) Sparkle'ı butonun konumuna yerleştir
+        Sparkle.transform.position = buttonWorldPos;
+
+        // 4) Başlangıçta çok küçük olsun (0)
+        Sparkle.transform.localScale = Vector3.zero;
+
+        RectTransform panelRect = backgroundPanel.GetComponent<RectTransform>();
+        Vector3 panelCenterWorldPos = panelRect.TransformPoint(panelRect.rect.center);
+
+        DG.Tweening.Sequence seq = DOTween.Sequence();
+
+        seq.Append(
+        Sparkle.transform
+                .DOMove(panelCenterWorldPos, 1.5f)
+                .SetEase(DG.Tweening.Ease.InOutQuad)
+        );
+        seq.Join(
+        Sparkle.transform
+                .DOScale(25f, 1.5f)
+                .SetEase(DG.Tweening.Ease.InOutQuad)
+        );
+
+        seq.OnComplete(() =>
+        {
+            
+            StartCoroutine(OpenChestsAfterDelay());
+
+            // 8) Sonsuz yavaş dönme için ayrı bir Tween (Sequence dışında):
+            Sparkle.transform
+                .DORotate(
+                    new Vector3(0f, 0f, 360f), 
+                    64f,                        
+                    RotateMode.FastBeyond360
+                )
+                .SetLoops(-1, DG.Tweening.LoopType.Incremental)
+                .SetEase(DG.Tweening.Ease.Linear);
+        });
+    }
+
+    private IEnumerator OpenChestsAfterDelay()
+    {
+        yield return new WaitForSeconds(1f);
+
+        AudioSource audioSource = GetComponent<AudioSource>();
+
+        if (_isBeneficial)
+        {
+            Chest3.SetActive(true);
+
+            audioSource.clip = FallingSound;
+            audioSource.Play();
+
+            // FallingSound süresi kadar bekle (örneğin 2 saniye)
+            yield return new WaitForSeconds(1.3f);
+            audioSource.Stop();
+        }
+        else
+        {
+            Chest1.SetActive(true);
+
+            audioSource.clip = FallingSound;
+            audioSource.Play();
+
+            yield return new WaitForSeconds(1.6f);
+            audioSource.Stop();
+        }
+    }
+
+
+    public void BombAudioForBad()
+    {
+        StartCoroutine(PlayBombAndThenBadSurprise());
+    }
+
+    private IEnumerator PlayBombAndThenBadSurprise()
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.clip = BombSoundBad;
+        audioSource.pitch = 2.5f;
+        audioSource.Play();
+
+        float waitTime = BombSoundBad.length / audioSource.pitch;
+        yield return new WaitForSeconds(waitTime);
+
+        BadSurpriseAudio();
+    }
+
+    public void BombAudioForGood()
+    {
+        StartCoroutine(PlayBombAndThenGoodSurprise());
+    }
+
+    private IEnumerator PlayBombAndThenGoodSurprise()
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.clip = BombSoundGood;
+        audioSource.pitch = 2.5f;
+        audioSource.Play();
+
+        float waitTime = BombSoundGood.length / audioSource.pitch;
+        yield return new WaitForSeconds(waitTime);
+
+        GoodSurpriseAudio();
+    }
+
+    public void GoodSurpriseAudio(){
+        GetComponent<AudioSource>().clip = GoodSound;
+        GetComponent<AudioSource>().Play();
+    }
+
+    public void BadSurpriseAudio(){
+        GetComponent<AudioSource>().clip = BadSound;
+        GetComponent<AudioSource>().Play();
+    }
+
+    public void AfterChest1_Animation(){
+        Chest1.SetActive(false);
+        Chest1_Original.SetActive(true);
+        Chest_Manager.SetActive(true);
+    }
+
+    public void AfterChest3_Animation(){
+        Chest3.SetActive(false);
+        Chest3_Original.SetActive(true);
+        Chest_Manager.SetActive(true);
+    }
+
+
 
     public void SetField(IConfig specialConfig,CardType cardType, GameObject questionPopup)
     {
