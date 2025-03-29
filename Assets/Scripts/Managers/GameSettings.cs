@@ -4,6 +4,7 @@ public static class GameSettings
     public static bool isCardSizeChangedFromSettings;
     public static int TeamSize;
     public static bool isTeamSizeChangedFromSettings;
+    public static bool isTeamNamesChangedFromSettings;
     public static string[] TeamNames;
     public static bool isOptionCountsChangedFromSettings;
     public static int OptionCounts;
@@ -11,6 +12,9 @@ public static class GameSettings
     public static int[] SpecialArray;
     public static bool isTimeSettingsChangedFromSettings;
     public static TimeSetting TimeSetting;
+    public static bool SpecialBlockAllowed;
+    public static int TotalQuestionCount;
+
 
     public static int GetCardSize()
     {
@@ -18,7 +22,33 @@ public static class GameSettings
         {
             return CardSize;
         }
-        else return 16;
+
+        if(isTeamSizeChangedFromSettings)
+        {
+            var teamsize = GetTeamSize();
+            if(teamsize == 1 || teamsize == 2 || teamsize == 4 || teamsize == 8 )
+            {
+                return 16;
+            }
+            else if ( teamsize == 3)
+            {
+                return 15;
+            }
+            else if(teamsize == 5 ) {
+                return 20;
+            }
+            else if(teamsize == 6)
+            {
+                return 18;
+            }
+            else if(teamsize == 7) {
+                return 14;
+            }
+        }
+
+        return 16;
+
+
     }
 
     public static int GetTeamSize()
@@ -62,6 +92,21 @@ public static class GameSettings
             return TimeSetting;
         }
         else return TimeSetting.DECREASING;
+    }
+
+    public static string[] GetTeamNames()
+    {
+        if(isTeamNamesChangedFromSettings)
+        {
+            return TeamNames;
+        }
+        else return null;
+    }
+
+    public static int GetTotalQuestionCount()
+    {
+        return TotalQuestionCount;
+
     }
 
 

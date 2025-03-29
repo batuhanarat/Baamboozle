@@ -15,6 +15,9 @@ public static class ServiceProvider
     public static TimeSettingSelector TimeSettingSelector => GetManager<TimeSettingSelector>();
     public static OptionCountSelectorForMultipleChoiceQuestion OptionCountSelectorForMultipleChoiceQuestion => GetManager<OptionCountSelectorForMultipleChoiceQuestion>();
     public static SpecialItemSelector SpecialItemSelector => GetManager<SpecialItemSelector>();
+    public static ScoreManager ScoreManager => GetManager<ScoreManager>();
+
+
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void InitializeServiceProvider()
@@ -26,6 +29,7 @@ public static class ServiceProvider
     {
         _ = new TeamManager();
         _ = new SpecialItemFactory();
+        _ = new ScoreManager();
     }
 
     private static void RegisterSceneEvents()

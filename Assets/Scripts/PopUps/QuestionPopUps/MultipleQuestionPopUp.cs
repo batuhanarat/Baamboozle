@@ -1,6 +1,7 @@
 
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,9 +19,16 @@ public class MultipleQuestionPopUp : QuestionPopUp
     private QuestionConfig questionConfig;
     private MultipleQuestion multipleQuestion;
     private int questionPoint => int.Parse(pointText.text.Replace(" puan", ""));
+
+    private int questionPointStandart  => 60;
+
+
     private int trueQuestionId;
 
     private CardUI card;
+
+    private bool timerEnabled = true;
+    private bool decreasingScore = true;
 
 
     public override void SetData(IConfig config, Question question, CardUI cardUI)
@@ -40,7 +48,23 @@ public class MultipleQuestionPopUp : QuestionPopUp
             {
                 Debug.Log("soru tipi hatalı geldi ");
             }
+            GetConfigs();
             SetQuestion(multipleQuestion);
+
+        }
+    }
+
+    private void GetConfigs()
+    {
+        var timeSettings =  GameSettings.GetTimeSetting();
+
+        if(timeSettings == TimeSetting.NO_TIME)
+        {
+            timerEnabled = false;
+        }
+        if( timeSettings == TimeSetting.STANDART)
+        {
+            decreasingScore = false;
         }
     }
 
@@ -49,21 +73,43 @@ public class MultipleQuestionPopUp : QuestionPopUp
         multipleQuestion = question;
 
         questionText.text = multipleQuestion.questionText;
-        pointText.text = questionConfig.point.ToString();
+        pointText.text = questionConfig.point.ToString() + " puan";
         trueQuestionId = multipleQuestion.correctAnswerId;
 
         options = new List<Button>();
-        for( int i = 0 ; i< multipleQuestion.optionCount ; i++)
+
+        var optionButtonGO = Instantiate(optionPrefab,buttonHolder);
+        var optionButton = optionButtonGO.GetComponent<Button>();
+        optionButton.GetComponentInChildren<TextMeshProUGUI>().SetText(multipleQuestion.answersText[multipleQuestion.correctAnswerId]);
+        optionButton.onClick.AddListener(() => OnOptionPressed(multipleQuestion.correctAnswerId));
+        options.Add(optionButton);
+
+        var remaining = GameSettings.GetOptionCounts()-1;
+
+
+
+        for( int i = 0 ; i< remaining ; i++)
         {
-            var optionButtonGO = Instantiate(optionPrefab,buttonHolder);
-            var optionButton = optionButtonGO.GetComponent<Button>();
-            optionButton.GetComponentInChildren<TextMeshProUGUI>().SetText(multipleQuestion.answersText[i]);
+            if(i == multipleQuestion.correctAnswerId) continue;
+
+            var optionButtonGO2 = Instantiate(optionPrefab,buttonHolder);
+            var optionButton2 = optionButtonGO2.GetComponent<Button>();
+            optionButton2.GetComponentInChildren<TextMeshProUGUI>().SetText(multipleQuestion.answersText[i]);
             int optionIndex = i;
             optionButton.onClick.AddListener(() => OnOptionPressed(optionIndex));
             options.Add(optionButton);
         }
 
-        StartTimer();
+
+
+
+        if(timerEnabled)
+        {
+            StartTimer();
+        } else
+        {
+            GetComponentInChildren<Clock>().gameObject.SetActive(false);
+        }
 
     }
 
@@ -71,7 +117,7 @@ public class MultipleQuestionPopUp : QuestionPopUp
     {
         Clock clock = GetComponentInChildren<Clock>();
         var initialTime = questionConfig.timeForQuestion;
-        clock.SetTimerValue(initialTime);
+        clock.SetTimerValue(initialTime,decreasingScore);
         clock.StartTimer();
     }
 
@@ -82,24 +128,38 @@ public class MultipleQuestionPopUp : QuestionPopUp
 
     public void OnOptionPressed(int optionId)
     {
+        var point = decreasingScore ?  questionPoint : questionPointStandart;
 
         if(optionId == trueQuestionId)
         {
             var team = ServiceProvider.TeamManager.GetActiveTeam();
-            team.UpdateScore(questionPoint);
+            team.UpdateScore(point);
             var source  = GetComponent<AudioSource>();
             source.clip = trueSound;
             source.Play();
         } else
         {
             var team = ServiceProvider.TeamManager.GetActiveTeam();
-            team.UpdateScore(-questionPoint);
+            team.UpdateScore(-point);
             var source  = GetComponent<AudioSource>();
             source.clip = falseSound;
             source.Play();
         }
         ServiceProvider.TeamManager.ChangeTeam();
+        ServiceProvider.ScoreManager.DecreaseCard();
 
+        card.DeactivateCard();
+        Close();
+    }
+
+    public void TimeFinished()
+    {
+        var team = ServiceProvider.TeamManager.GetActiveTeam();
+        team.UpdateScore(0);
+        var source  = GetComponent<AudioSource>();
+        source.clip = falseSound;
+        source.Play();
+        ServiceProvider.TeamManager.ChangeTeam();
         card.DeactivateCard();
         Close();
     }

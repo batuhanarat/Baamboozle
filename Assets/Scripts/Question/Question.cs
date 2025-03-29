@@ -29,6 +29,4 @@ public class MultipleQuestion : Question
 {
     public string[] answersText;
     public int correctAnswerId;
-    public int optionCount;
-
 }

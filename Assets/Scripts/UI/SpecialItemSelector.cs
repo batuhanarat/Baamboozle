@@ -8,6 +8,8 @@ public class SpecialItemSelector : MonoBehaviour, IProvidable
     private const int TOTAL_SPECIAL_COUNT = 11;
     private int[] specialArray = new int[TOTAL_SPECIAL_COUNT];
 
+
+
     public void Awake()
     {
         ServiceProvider.Register(this);
@@ -20,6 +22,8 @@ public class SpecialItemSelector : MonoBehaviour, IProvidable
             item.ForceToggle();
             specialArray[i] = 0;
         }
+
+        GameSettings.SpecialBlockAllowed = true;
     }
 
     public void UpdateSelectedArray()

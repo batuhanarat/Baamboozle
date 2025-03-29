@@ -8,8 +8,7 @@
         "İzmir",
         "Bursa"
       ],
-      "correctAnswerId": 1,
-      "optionCount": 4
+      "correctAnswerId": 1
     },
     {
       "questionText": "Asagıdaki hayvanlardan hangisi memeli degildir?",
@@ -19,8 +18,7 @@
         "Timsah",
         "Fil"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Hangisi bir meyve degildir?",
@@ -30,8 +28,7 @@
         "Kivi",
         "Havuç"
       ],
-      "correctAnswerId": 3,
-      "optionCount": 4
+      "correctAnswerId": 3
     },
     {
       "questionText": "Dünya'nın uydusu nedir?",
@@ -41,8 +38,8 @@
         "Günes",
         "Merkür"
       ],
-      "correctAnswerId": 1,
-      "optionCount": 4
+      "correctAnswerId": 1
+
     },
     {
       "questionText": "Hangisi bir renk degildir?",
@@ -52,8 +49,7 @@
         "Yesil",
         "Kitap"
       ],
-      "correctAnswerId": 3,
-      "optionCount": 4
+      "correctAnswerId": 3
     },
     {
       "questionText": "Suyun kaynama sıcaklıgı kaç derecedir?",
@@ -63,8 +59,7 @@
         "100°C",
         "200°C"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Hangisi bir gezegen degildir?",
@@ -74,8 +69,7 @@
         "Ay",
         "Satürn"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Türkiye'nin en büyük gölü hangisidir?",
@@ -85,8 +79,7 @@
         "Beysehir Gölü",
         "Egirdir Gölü"
       ],
-      "correctAnswerId": 0,
-      "optionCount": 4
+      "correctAnswerId": 0
     },
     {
       "questionText": "Türkiye'nin en yüksek dagı hangisidir?",
@@ -96,8 +89,7 @@
         "Uludag",
         "Ilgaz Dagı"
       ],
-      "correctAnswerId": 1,
-      "optionCount": 4
+      "correctAnswerId": 1
     },
     {
       "questionText": "Hangisi bir mevsim degildir?",
@@ -107,8 +99,7 @@
         "İlkbahar",
         "Haziran"
       ],
-      "correctAnswerId": 3,
-      "optionCount": 4
+      "correctAnswerId": 3
     },
     {
       "questionText": "İnsan vücudunda kaç kemik vardır?",
@@ -118,8 +109,7 @@
         "306",
         "406"
       ],
-      "correctAnswerId": 1,
-      "optionCount": 4
+      "correctAnswerId": 1
     },
     {
       "questionText": "Hangisi bir müzik aleti degildir?",
@@ -129,8 +119,7 @@
         "Keman",
         "Tabak"
       ],
-      "correctAnswerId": 3,
-      "optionCount": 4
+      "correctAnswerId": 3
     },
     {
       "questionText": "1 hafta kaç gündür?",
@@ -140,8 +129,7 @@
         "7",
         "8"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Hangisi bir spor dalı degildir?",
@@ -151,8 +139,7 @@
         "Yüzme",
         "Matematik"
       ],
-      "correctAnswerId": 3,
-      "optionCount": 4
+      "correctAnswerId": 3
     },
     {
       "questionText": "İstiklal Marsı'nın yazarı kimdir?",
@@ -162,8 +149,7 @@
         "Namık Kemal",
         "Orhan Veli"
       ],
-      "correctAnswerId": 0,
-      "optionCount": 4
+      "correctAnswerId": 0
     },
     {
       "questionText": "Türkiye kaç bölgeye ayrılmıstır?",
@@ -173,8 +159,7 @@
         "7",
         "8"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Hangisi bir sayı degildir?",
@@ -184,8 +169,7 @@
         "Masa",
         "100"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Günes Sistemi'nde kaç gezegen vardır?",
@@ -195,8 +179,7 @@
         "8",
         "9"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Hangisi bir tasıt degildir?",
@@ -206,8 +189,7 @@
         "Tren",
         "Buzdolabı"
       ],
-      "correctAnswerId": 3,
-      "optionCount": 4
+      "correctAnswerId": 3
     },
     {
       "questionText": "Ülkemizin para birimi nedir?",
@@ -217,8 +199,7 @@
         "Türk Lirası",
         "Sterlin"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Hangisi bir sebze degildir?",
@@ -228,8 +209,7 @@
         "Çilek",
         "Kabak"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "İnsanlar nefes alırken hangi gazı kullanır?",
@@ -239,8 +219,7 @@
         "Azot",
         "Hidrojen"
       ],
-      "correctAnswerId": 0,
-      "optionCount": 4
+      "correctAnswerId": 0
     },
     {
       "questionText": "Kırmızı ve mavi renkleri karıstırılınca hangi renk olusur?",
@@ -250,8 +229,7 @@
         "Mor",
         "Sarı"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Bir yılda kaç mevsim vardır?",
@@ -261,8 +239,7 @@
         "4",
         "5"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Hangisi bir hayvan degildir?",
@@ -272,8 +249,7 @@
         "Sandalye",
         "Balık"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Saat kaç çesit rakamdan olusur?",
@@ -283,8 +259,7 @@
         "24",
         "60"
       ],
-      "correctAnswerId": 1,
-      "optionCount": 4
+      "correctAnswerId": 1
     },
     {
       "questionText": "Hangisi bir meslek degildir?",
@@ -294,8 +269,7 @@
         "Mühendis",
         "Karpuz"
       ],
-      "correctAnswerId": 3,
-      "optionCount": 4
+      "correctAnswerId": 3
     },
     {
       "questionText": "İnsanların yasadıgı kıta hangisidir?",
@@ -305,8 +279,7 @@
         "Afrika",
         "Hepsi"
       ],
-      "correctAnswerId": 3,
-      "optionCount": 4
+      "correctAnswerId": 3
     },
     {
       "questionText": "En küçük dogal sayı hangisidir?",
@@ -316,8 +289,7 @@
         "2",
         "-1"
       ],
-      "correctAnswerId": 1,
-      "optionCount": 4
+      "correctAnswerId": 1
     },
     {
       "questionText": "Hangisi bir içecek degildir?",
@@ -327,8 +299,7 @@
         "Kola",
         "Ekmek"
       ],
-      "correctAnswerId": 3,
-      "optionCount": 4
+      "correctAnswerId": 3
     },
     {
       "questionText": "Atatürk hangi yılda vefat etmistir?",
@@ -338,8 +309,7 @@
         "1938",
         "1945"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Türkiye Cumhuriyeti hangi yıl kurulmustur?",
@@ -349,8 +319,7 @@
         "1938",
         "1945"
       ],
-      "correctAnswerId": 1,
-      "optionCount": 4
+      "correctAnswerId": 1
     },
     {
       "questionText": "Hangisi bir ay degildir?",
@@ -360,8 +329,7 @@
         "Salı",
         "Kasım"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "Dünya'nın sekli neye benzer?",
@@ -371,8 +339,7 @@
         "Küre",
         "Silindir"
       ],
-      "correctAnswerId": 2,
-      "optionCount": 4
+      "correctAnswerId": 2
     },
     {
       "questionText": "İnsanın kalbi vücudunun hangi tarafındadır?",
@@ -382,8 +349,7 @@
         "Orta",
         "Arkada"
       ],
-      "correctAnswerId": 1,
-      "optionCount": 4
+      "correctAnswerId": 1
     },
     {
       "questionText": "Hangisi en uzun zaman dilimini ifade eder?",
@@ -393,8 +359,7 @@
         "Gün",
         "Yıl"
       ],
-      "correctAnswerId": 3,
-      "optionCount": 4
+      "correctAnswerId": 3
     }
   ]
 }

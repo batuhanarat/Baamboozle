@@ -8,7 +8,7 @@ public class Clock : MonoBehaviour
     [SerializeField] private TextMeshProUGUI pointText;
     private float timeRemaining = 30f; // 30 saniye
     private bool timerIsRunning = false;
-
+    private bool shouldDecreaseScorText = true;
     public void StartTimer()
     {
         timerIsRunning = true;
@@ -37,13 +37,14 @@ public class Clock : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
                 UpdateTimerDisplay();
-
+                GetComponentInParent<MultipleQuestionPopUp>().TimeFinished();
             }
         }
     }
 
-    public void SetTimerValue(int startTimeRemaining)
+    public void SetTimerValue(int startTimeRemaining,bool decreasingScore)
     {
+        shouldDecreaseScorText =decreasingScore;
         timeRemaining = startTimeRemaining;
     }
 
@@ -53,9 +54,14 @@ public class Clock : MonoBehaviour
         int seconds = Mathf.FloorToInt(timeRemaining % 60);
         var remainingTimeString = string.Format("{0}:{1:00}", minutes, seconds);
         clockText.text = remainingTimeString;
-        var pointString = string.Format("{0}", seconds);
 
-        pointText.text = pointString + " puan";
+        if(shouldDecreaseScorText)
+        {
+            var pointString = string.Format("{0}", seconds);
+
+            pointText.text = pointString + " puan";
+        }
+
 
     }
 

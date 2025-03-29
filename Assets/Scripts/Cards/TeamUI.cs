@@ -20,8 +20,8 @@ public class TeamUI : MonoBehaviour
 
     public void SetCurrentTeam()
     {
-        teamNameText.color = Color.yellow;
-        scoreText.color =  Color.yellow;
+        teamNameText.color = Color.red;
+        scoreText.color =  Color.red;
     }
     public void SetOtherTeam()
     {
@@ -29,6 +29,11 @@ public class TeamUI : MonoBehaviour
         scoreText.color =  originalColor;
     }
 
+    public void ChangeName(string name)
+    {
+        teamNameText.text = name;
+
+    }
 
     public void Initialize(int teamID, string teamName, int teamScore)
     {

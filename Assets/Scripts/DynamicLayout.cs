@@ -1,5 +1,5 @@
+using System;
 using System.Collections.Generic;
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 
 public class DynamicLayout : MonoBehaviour
@@ -18,6 +18,8 @@ public class DynamicLayout : MonoBehaviour
     private int questionCount;
     private int specialCount = 0;
 
+    public TimeSetting TimeSetting;
+
     #region  Game Settings
 
         [SerializeField] public QuestionType questionType;
@@ -26,10 +28,26 @@ public class DynamicLayout : MonoBehaviour
     #endregion
 
     Dictionary<int , Vector2Int> gridSizeMapper = new Dictionary<int ,Vector2Int>{
+        {7, new Vector2Int(7,1)},
+        {14, new Vector2Int(7,2)},
+        {21, new Vector2Int(7,3)},
+        {28, new Vector2Int(7,4)},
         {8, new Vector2Int(4,2)},
+        {12, new Vector2Int(4,3)},
+        {15, new Vector2Int(3,5)},
         {16, new Vector2Int(4,4)},
+        {18, new Vector2Int(6,3)},
+        {20, new Vector2Int(5,4)},
         {24, new Vector2Int(6,4)},
-        {36, new Vector2Int(6,6)}
+        {25, new Vector2Int(5,5)},
+        {30, new Vector2Int(6,5)},
+        {32, new Vector2Int(8,4)},
+        {35, new Vector2Int(7,5)},
+        {36, new Vector2Int(6,6)},
+        {40, new Vector2Int(8,5)},
+        {42, new Vector2Int(6,7)},
+        {45, new Vector2Int(9,5)},
+        {48, new Vector2Int(6,8)},
     };
 
     [SerializeField] private GameObject cardPrefab;
@@ -61,10 +79,7 @@ public class DynamicLayout : MonoBehaviour
 
     #endregion
 
-    private void GetSpecials()
-    {
 
-    }
     private List<SpecialCardType> ChooseSpecials(int gridSize)
     {
         specialCount = gridSize/SPEACIAL_TWEAKER;
@@ -182,16 +197,62 @@ public class DynamicLayout : MonoBehaviour
         return selectedCards;
     }
 
+    private List<SpecialCardType> GetSpecialsFromSettings()
+    {
+        CanHaveSpecial = !GameSettings.SpecialBlockAllowed;
+        if(!CanHaveSpecial) return null;
+        var availableSpecials = new  List<SpecialCardType>();
+
+        if(GameSettings.isSpecialArrayChangedFromSettings)
+        {
+            var specialsFromSettingsArray = GameSettings.SpecialArray;
+            for(int i = 0 ; i< TOTAL_SPECIAL_COUNT ; i++)
+            {
+                if(specialsFromSettingsArray[i] == 1)
+                {
+                    availableSpecials.Add(specialEnums[i]);
+                }
+            }
+
+            return ChooseSpecialsFromSettings(GridSize,availableSpecials);
+        }
+        else
+        {
+            return ChooseSpecials(GridSize);
+
+        }
+    }
+
+
+    private List<SpecialCardType> ChooseSpecialsFromSettings(int gridSize,  List<SpecialCardType> availableSpecials)
+        {
+            specialCount = gridSize/SPEACIAL_TWEAKER;
+
+            List<SpecialCardType> selectedSpecials = new();
+
+            while (selectedSpecials.Count < specialCount && availableSpecials.Count > 0)
+            {
+                int randomIndex = UnityEngine.Random.Range(0, availableSpecials.Count);
+
+                selectedSpecials.Add(availableSpecials[randomIndex]);
+
+                availableSpecials.RemoveAt(randomIndex);
+            }
+
+            return selectedSpecials;
+        }
+
+
     public void GenerateBoard()
     {
         ClearBoard();
         Initialize();
+        List<SpecialCardType> specials = GetSpecialsFromSettings();
+        InitSpecialCardDict();
+        Debug.Log("special card dict count " +specialCardDictionary.Count);
 
         if(CanHaveSpecial)
         {
-            List<SpecialCardType> specials =  ChooseSpecials(GridSize);
-            InitSpecialCardDict();
-            Debug.Log("special card dict count " +specialCardDictionary.Count);
             foreach(var special in specials)
             {
                 specialConfigs.Add(specialCardDictionary[special]);
@@ -199,7 +260,7 @@ public class DynamicLayout : MonoBehaviour
             }
         }
 
-
+        ServiceProvider.ScoreManager.SetData(GameSettings.CardSize);
         InitQuestionCardDict();
         GetQuestions();
         Debug.Log("All cardsın size i questionlar eklenmiş  " +allCards.Count);

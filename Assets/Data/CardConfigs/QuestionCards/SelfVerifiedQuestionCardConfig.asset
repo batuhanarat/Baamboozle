@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SelfVerifiedQuestionCardConfig
   m_EditorClassIdentifier: 
   PopUpPrefab: {fileID: 0}
-  contentConfig: {fileID: 0}
+  contentConfig: {fileID: 11400000, guid: 3b6ccaa446d574441916baca244f97eb, type: 2}
   cardType: 0

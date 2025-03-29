@@ -2738,7 +2738,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Her soru i\xE7in 60 sn standart puan\n"
+  m_text: "Her soru i\xE7in 60 sn standart puan"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d107be71fbec543f9a7111d1b9870780, type: 2}
   m_sharedMaterial: {fileID: 2889090923172615060, guid: d107be71fbec543f9a7111d1b9870780, type: 2}

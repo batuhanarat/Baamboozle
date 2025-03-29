@@ -7,6 +7,7 @@ public class TeamSizeSelector : MonoBehaviour , IProvidable
     public ToggleGroup toggleGroup;
     private int _teamSize;
     private bool _changedFromSettings = false;
+    private int selectedCard = 5;
     public int SelectedTeamSize
     {
         get
@@ -26,6 +27,7 @@ public class TeamSizeSelector : MonoBehaviour , IProvidable
         {
             toggle.onValueChanged.AddListener((isOn) => OnToggleValueChanged(toggle, isOn));
         }
+        ServiceProvider.CardSizeSelector.ChangeCardSize(selectedCard);
     }
 
     void OnToggleValueChanged(Toggle changedToggle, bool isOn)
@@ -39,6 +41,8 @@ public class TeamSizeSelector : MonoBehaviour , IProvidable
                 _teamSize = teamSize;
                 GameSettings.TeamSize = _teamSize;
                 GameSettings.isTeamSizeChangedFromSettings = true;
+                ServiceProvider.CardSizeSelector.ChangeCardSize(_teamSize);
+
             }
             else
             {

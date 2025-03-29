@@ -40,14 +40,14 @@ public class TimeSettingSelector : MonoBehaviour , IProvidable
                 GameSettings.TimeSetting = _timeSetting;
                 Debug.Log("Azalan puan modu seçildi.");
             }
-            else if (toggleLabel == "Her soru icin 60 sn standart puan")
+            else if (toggleLabel == "Her soru için 60 sn standart puan")
             {
                 _timeSetting = TimeSetting.STANDART;
                     GameSettings.isTimeSettingsChangedFromSettings = true;
                 GameSettings.TimeSetting = _timeSetting;
                 Debug.Log("Standart puan modu seçildi.");
             }
-            else if (toggleLabel == "Suresiz")
+            else if (toggleLabel == "Süresiz")
             {
                 _timeSetting = TimeSetting.NO_TIME;
                 GameSettings.isTimeSettingsChangedFromSettings = true;
