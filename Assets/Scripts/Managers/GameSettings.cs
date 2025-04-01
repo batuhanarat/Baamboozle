@@ -16,6 +16,7 @@ public static class GameSettings
     public static int TotalQuestionCount;
 
 
+
     public static int GetCardSize()
     {
         if(isCardSizeChangedFromSettings)
@@ -47,7 +48,6 @@ public static class GameSettings
         }
 
         return 16;
-
 
     }
 
@@ -108,6 +108,8 @@ public static class GameSettings
         return TotalQuestionCount;
 
     }
+
+
 
 
 }

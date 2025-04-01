@@ -17,6 +17,8 @@ public class SpecialPopUp : Popup
         private bool IsSpecial = false;
         protected CardUI card;
 
+
+
         protected TMPro.TextMeshProUGUI GetDescription()
         {
             return description;
@@ -58,6 +60,8 @@ public class SpecialPopUp : Popup
                 specialCard.Execute();
             }
             card.DeactivateCard();
+            ServiceProvider.ScoreManager.DecreaseCard();
+
             Close();
         }
         public virtual void Init()

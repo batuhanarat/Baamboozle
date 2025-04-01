@@ -9,14 +9,26 @@ public class AdPanelController : MonoBehaviour
     [SerializeField] public VidPlayer videoPlayer;
     [SerializeField] public ImageAdShower imageAdShower;
 
+    [SerializeField] public GameObject RawImage;
+
+    private const string CanShowAddKey = "can_show_add";
+
+
     private bool TimerActivated = false;
-    private float videoDuration = 2f;
-    private float imageDuration = 1f;
-    public AdType currentAdType =  AdType.Video;
+    private float videoDuration = 10f;
+    private float imageDuration = 10f;
+    public AdType currentAdType =  AdType.Image;
     private float timeRemaining;
 
-    public  void Start()
+    public void Start()
     {
+        TryShowAdd();
+    }
+
+    public void TryShowAdd()
+    {
+        if(!PlayerPrefs.HasKey(CanShowAddKey)) return;
+
         ShowAd(currentAdType);
     }
 
@@ -54,7 +66,7 @@ public class AdPanelController : MonoBehaviour
         }
         if(adType == AdType.Image)
         {
-
+            RawImage.SetActive(false);
             imageAdShower.ShowAdImage();
             timeRemaining = imageDuration;
 

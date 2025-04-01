@@ -32,7 +32,7 @@ public class TeamUI : MonoBehaviour
     public void ChangeName(string name)
     {
         teamNameText.text = name;
-
+        teamName = name;
     }
 
     public void Initialize(int teamID, string teamName, int teamScore)

@@ -16,6 +16,11 @@ public class AssetLibrary : MonoBehaviour , IProvidable
     [SerializeField] private GameObject StrawberryPrefab;
     [SerializeField] public GameObject ANIMATION;
 
+    [SerializeField] public GameObject WinPanel;
+
+
+    [SerializeField] public Transform GamePopupRoot;
+
 
 
     private  void Awake()

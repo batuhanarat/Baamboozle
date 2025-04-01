@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class CardUI : MonoBehaviour
 {
-    
+
     private int _number;
     private bool _isBeneficial;
     [SerializeField] private Sprite darkblueSprite;
@@ -32,7 +32,7 @@ public class CardUI : MonoBehaviour
     [SerializeField] public AudioClip fireSound;
     [SerializeField] private AudioClip specialClickedSound2;
     [SerializeField] public GameObject SpecialGoodAnim;
-    [SerializeField] public GameObject SpecialBadAnim;    
+    [SerializeField] public GameObject SpecialBadAnim;
     [SerializeField] public GameObject Sparkle;
     [SerializeField] public GameObject Chest1;
     [SerializeField] public GameObject Chest3;
@@ -49,6 +49,7 @@ public class CardUI : MonoBehaviour
     [SerializeField] public AudioClip WindSound;
     [SerializeField] public AudioClip FallingSound;
 
+    [SerializeField] public Sprite usedSprite;
 
     public void SetQuestionNumber(int number)
     {
@@ -223,6 +224,7 @@ public class CardUI : MonoBehaviour
 
     public void DeactivateCard()
     {
+
         shadow.SetActive(false);
         buttonHolder.SetActive(false);
         text.SetActive(false);
@@ -236,7 +238,7 @@ public class CardUI : MonoBehaviour
 
 
     }
-    
+
     public void PlayEntranceAnimation(bool isBeneficial)
     {
         _isBeneficial = isBeneficial;
@@ -252,7 +254,7 @@ public class CardUI : MonoBehaviour
             BombAudioForBad();
         }
     }
-    
+
     public void ButtonDestroyed(){
         buttonHolder.SetActive(false);
         QuestionNumber.SetActive(false);
@@ -262,14 +264,15 @@ public class CardUI : MonoBehaviour
     {
         // Sahnedeki ana Canvas'ı bul
         GameObject mainCanvas = GameObject.Find("Canvas");
-        
+
         if (mainCanvas != null && backgroundPanel != null)
         {
             backgroundPanel.transform.SetParent(mainCanvas.transform, false);
             RectTransform rect = backgroundPanel.GetComponent<RectTransform>();
-            rect.anchorMin = new Vector2(0, 0);
+           /* rect.anchorMin = new Vector2(0, 0);
             rect.anchorMax = new Vector2(1, 1);
             rect.pivot = new Vector2(0.5f, 0.5f);
+            */
             rect.anchoredPosition = Vector2.zero;
             rect.sizeDelta = Vector2.zero;
 
@@ -348,14 +351,14 @@ public class CardUI : MonoBehaviour
 
         seq.OnComplete(() =>
         {
-            
+
             StartCoroutine(OpenChestsAfterDelay());
 
             // 8) Sonsuz yavaş dönme için ayrı bir Tween (Sequence dışında):
             Sparkle.transform
                 .DORotate(
-                    new Vector3(0f, 0f, 360f), 
-                    64f,                        
+                    new Vector3(0f, 0f, 360f),
+                    64f,
                     RotateMode.FastBeyond360
                 )
                 .SetLoops(-1, DG.Tweening.LoopType.Incremental)

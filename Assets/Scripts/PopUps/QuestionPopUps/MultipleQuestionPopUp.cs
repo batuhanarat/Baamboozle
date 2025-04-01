@@ -1,16 +1,19 @@
 
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MultipleQuestionPopUp : QuestionPopUp
 {
     [SerializeField] public TextMeshProUGUI questionText;
+    [SerializeField] public TextMeshProUGUI questionTextWithImage;
+    private TextMeshProUGUI currentQuestionText;
     [SerializeField] public TextMeshProUGUI pointText;
+    [SerializeField] public TextMeshProUGUI pointTextWithImage;
+    private TextMeshProUGUI currentPointText;
     private List<Button> options;
-
     [SerializeField] public GameObject optionPrefab;
     [SerializeField] public Transform buttonHolder;
     [SerializeField] public AudioClip trueSound;
@@ -18,11 +21,22 @@ public class MultipleQuestionPopUp : QuestionPopUp
     [SerializeField] public GameObject Correct;
     [SerializeField] public GameObject Wrong;
     private Color originalOptionColor = new Color(1f, 1f, 1f, 1f); // beyaz (varsayılan)
+    private bool HasImage = false;
+    [SerializeField] private Sprite sprite;
+
+    [SerializeField] private GameObject normalTımer;
+    [SerializeField] private GameObject timerForImage;
+    [SerializeField] private GameObject normalBar;
+
+    [SerializeField] private GameObject barforImage;
+
+    [SerializeField] private GameObject reelImagego;
+    [SerializeField] private Image reelImage;
 
 
 
     private QuestionConfig questionConfig;
-    private MultipleQuestion multipleQuestion;
+    private  Question multipleQuestion;
     private int questionPoint => int.Parse(pointText.text.Replace(" puan", ""));
 
     private int questionPointStandart  => 60;
@@ -47,7 +61,7 @@ public class MultipleQuestionPopUp : QuestionPopUp
         QuestionType questionType = questionConfig.questionType;
         if( questionType == QuestionType.MULTIPLE_CHOICE)
         {
-            var multipleQuestion = (MultipleQuestion) question;
+            var multipleQuestion = question;
 
             if(multipleQuestion == null)
             {
@@ -73,49 +87,72 @@ public class MultipleQuestionPopUp : QuestionPopUp
         }
     }
 
-    private void SetQuestion(MultipleQuestion question)
+    private void SetQuestion(Question question)
     {
         multipleQuestion = question;
+        if(HasImage)
+        {
+            normalTımer.SetActive(false);
+            timerForImage.SetActive(true);
 
-        questionText.text = multipleQuestion.questionText;
-        pointText.text = questionConfig.point.ToString() + " puan";
+            normalBar.SetActive(false);
+            barforImage.SetActive(true);
+
+            currentQuestionText = questionTextWithImage;
+            currentPointText = pointTextWithImage;
+
+            reelImagego.SetActive(true);
+            reelImage.sprite=sprite;
+
+        } else
+        {
+            currentQuestionText =  questionText;
+            currentPointText = pointText;
+        }
+        currentQuestionText.text = multipleQuestion.questionText;
+        currentPointText.text = questionConfig.point.ToString() + " puan";
         trueQuestionId = multipleQuestion.correctAnswerId;
 
+        //hasimage ı burada al
+        //image ı da burada al
         options = new List<Button>();
+        int optionCount = Mathf.Clamp(GameSettings.GetOptionCounts(), 2, 4); // 2, 3 veya 4 şık
 
-        var optionButtonGO = Instantiate(optionPrefab,buttonHolder);
-        var optionButton = optionButtonGO.GetComponent<Button>();
-        optionButton.GetComponentInChildren<TextMeshProUGUI>().SetText(multipleQuestion.answersText[multipleQuestion.correctAnswerId]);
-        optionButton.onClick.AddListener(() => OnOptionPressed(multipleQuestion.correctAnswerId));
-        options.Add(optionButton);
-
-        var remaining = GameSettings.GetOptionCounts()-1;
-
-
-
-        for( int i = 0 ; i< remaining ; i++)
+        if(optionCount < 4 || HasImage)
         {
-            if(i == multipleQuestion.correctAnswerId) continue;
+            buttonHolder.GetComponent<GridLayoutGroup>().constraint = GridLayoutGroup.Constraint.FixedRowCount;
+            buttonHolder.GetComponent<GridLayoutGroup>().constraintCount = 1;
+        }
 
-            var optionButtonGO2 = Instantiate(optionPrefab,buttonHolder);
-            var optionButton2 = optionButtonGO2.GetComponent<Button>();
-            optionButton2.GetComponentInChildren<TextMeshProUGUI>().SetText(multipleQuestion.answersText[i]);
-            int optionIndex = i;
-            optionButton.onClick.AddListener(() => OnOptionPressed(optionIndex));
+
+
+
+        List<int> allOptionIndexes = new List<int> { 0, 1, 2, 3 };
+
+        List<int> activeOptionIndexes = new List<int> { trueQuestionId };
+
+        List<int> wrongOptions = allOptionIndexes.Except(activeOptionIndexes).ToList();
+        while (activeOptionIndexes.Count < optionCount && wrongOptions.Count > 0)
+        {
+            int randomIndex = Random.Range(0, wrongOptions.Count);
+            activeOptionIndexes.Add(wrongOptions[randomIndex]);
+            wrongOptions.RemoveAt(randomIndex);
+        }
+
+        activeOptionIndexes.Sort();
+
+        foreach (int originalIndex in activeOptionIndexes)
+        {
+            var optionButtonGO = Instantiate(optionPrefab, buttonHolder);
+            var optionButton = optionButtonGO.GetComponent<Button>();
+            optionButton.GetComponentInChildren<TextMeshProUGUI>().text = multipleQuestion.answersText[originalIndex];
+
+            optionButton.onClick.AddListener(() => OnOptionPressed(originalIndex));
             options.Add(optionButton);
         }
 
-
-
-
-        if(timerEnabled)
-        {
-            StartTimer();
-        } else
-        {
-            GetComponentInChildren<Clock>().gameObject.SetActive(false);
-        }
-
+        if (timerEnabled) StartTimer();
+        else GetComponentInChildren<Clock>().gameObject.SetActive(false);
     }
 
     public virtual void StartTimer()
@@ -131,6 +168,7 @@ public class MultipleQuestionPopUp : QuestionPopUp
 
     }
 
+
     public void OnOptionPressed(int optionId)
     {
         // Butona basılır basılmaz tüm opsiyonları devre dışı bıraktım. Buglar vardı.
@@ -142,7 +180,7 @@ public class MultipleQuestionPopUp : QuestionPopUp
         if (optionId == trueQuestionId)
         {
             var team = ServiceProvider.TeamManager.GetActiveTeam();
-            team.UpdateScore(point);
+            team.UpdateScore(questionPoint);
             var source  = GetComponent<AudioSource>();
             source.clip = trueSound;
             source.Play();
@@ -152,18 +190,17 @@ public class MultipleQuestionPopUp : QuestionPopUp
         else
         {
             var team = ServiceProvider.TeamManager.GetActiveTeam();
-            team.UpdateScore(-point);
+            team.UpdateScore(-questionPoint);
             var source  = GetComponent<AudioSource>();
             source.clip = falseSound;
             source.Play();
             Wrong.SetActive(true);
             Wrong.GetComponent<Animator>().SetTrigger("WrongTrigger");
         }
-        ServiceProvider.TeamManager.ChangeTeam();
-        ServiceProvider.ScoreManager.DecreaseCard();
-
+    }
     public void AfterOnOptionPressed(){
         ServiceProvider.TeamManager.ChangeTeam();
+        ServiceProvider.ScoreManager.DecreaseCard();
         card.DeactivateCard(); //ekranda bir şey kalıyorsa onları temizleriz
         Close();
     }

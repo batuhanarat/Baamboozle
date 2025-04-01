@@ -1,4 +1,6 @@
+
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,48 +8,200 @@ using UnityEngine.UI;
 public class TrueFalseQuestionPopUp : QuestionPopUp
 {
     [SerializeField] public TextMeshProUGUI questionText;
-    [SerializeField] public List<Button> options;
+    [SerializeField] public TextMeshProUGUI questionTextWithImage;
+    private TextMeshProUGUI currentQuestionText;
+    [SerializeField] public TextMeshProUGUI pointText;
+    [SerializeField] public TextMeshProUGUI pointTextWithImage;
+    private TextMeshProUGUI currentPointText;
+    private List<Button> options;
+    [SerializeField] public GameObject optionPrefab;
+    [SerializeField] public Transform buttonHolder;
     [SerializeField] public AudioClip trueSound;
     [SerializeField] public AudioClip falseSound;
+    [SerializeField] public GameObject Correct;
+    [SerializeField] public GameObject Wrong;
+    private Color originalOptionColor = new Color(1f, 1f, 1f, 1f); // beyaz (varsayılan)
+    private bool HasImage = false;
+    [SerializeField] private Sprite sprite;
+
+    [SerializeField] private GameObject normalTımer;
+    [SerializeField] private GameObject timerForImage;
+    [SerializeField] private GameObject normalBar;
+
+    [SerializeField] private GameObject barforImage;
+
+    [SerializeField] private GameObject reelImagego;
+    [SerializeField] private Image reelImage;
 
 
-    private int questionPoint;
-    private int trueQuestionId;
+
     private QuestionConfig questionConfig;
+    private  Question trueFalseQuestion;
+    private int questionPoint => int.Parse(pointText.text.Replace(" puan", ""));
+
+    private int questionPointStandart  => 60;
 
 
-    private void SetQuestionConfig(QuestionConfig config)
+    private int trueQuestionId;
+
+    private CardUI card;
+
+    private bool timerEnabled = true;
+    private bool decreasingScore = true;
+
+
+    public override void SetData(IConfig config, Question question, CardUI cardUI)
     {
-        questionConfig = config;
-        /*
-        questionText.text = config.question;
-        questionPoint = config.point;
-        trueQuestionId = config.correctAnswer;
-        for( int i = 0 ; i< config.answer.Length ; i++)
+        if(config is QuestionConfig)
         {
-            options[i].GetComponentInChildren<TextMeshProUGUI>().SetText(config.answer[i]);
-            options[i].onClick.AddListener( () => OnOptionPressed(i));
+            questionConfig = (QuestionConfig) config;
+            this.card = cardUI;
         }
-        */
+
+        QuestionType questionType = questionConfig.questionType;
+        if( questionType == QuestionType.TRUE_FALSE)
+        {
+            var trueFalseQuestion = question;
+
+            if(trueFalseQuestion == null)
+            {
+                Debug.Log("soru tipi hatalı geldi ");
+            }
+            GetConfigs();
+            SetQuestion(trueFalseQuestion);
+        }
     }
-    public void OnOptionPressed(int optionId)
+
+    private void GetConfigs()
     {
-        if(optionId == trueQuestionId)
+        var timeSettings =  GameSettings.GetTimeSetting();
+
+        if(timeSettings == TimeSetting.NO_TIME)
+        {
+            timerEnabled = false;
+        }
+        if( timeSettings == TimeSetting.STANDART)
+        {
+            decreasingScore = false;
+        }
+    }
+
+    private void SetQuestion(Question question)
+    {
+        trueFalseQuestion = question;
+        if(HasImage)
+        {
+            normalTımer.SetActive(false);
+            timerForImage.SetActive(true);
+
+            normalBar.SetActive(false);
+            barforImage.SetActive(true);
+
+            currentQuestionText = questionTextWithImage;
+            currentPointText = pointTextWithImage;
+
+            reelImagego.SetActive(true);
+            reelImage.sprite=sprite;
+
+        } else
+        {
+            currentQuestionText =  questionText;
+            currentPointText = pointText;
+        }
+        currentQuestionText.text = trueFalseQuestion.questionText;
+        currentPointText.text = questionConfig.point.ToString() + " puan";
+        trueQuestionId = trueFalseQuestion.correctAnswerId;
+
+        //hasimage ı burada al
+        //image ı da burada al
+
+        if (timerEnabled) StartTimer();
+        else GetComponentInChildren<Clock>().gameObject.SetActive(false);
+    }
+
+    public virtual void StartTimer()
+    {
+        Clock clock = GetComponentInChildren<Clock>();
+        var initialTime = questionConfig.timeForQuestion;
+        clock.SetTimerValue(initialTime,decreasingScore);
+        clock.StartTimer();
+    }
+
+    public override void Init()
+    {
+
+    }
+
+    //truequestionıd 0 ise doğru cevap false
+     public void OnFalsePressed()
+    {
+        var questionId = 0;
+        if(trueQuestionId == questionId)
         {
             var team = ServiceProvider.TeamManager.GetActiveTeam();
             team.UpdateScore(questionPoint);
             var source  = GetComponent<AudioSource>();
             source.clip = trueSound;
             source.Play();
-        } else
+            Correct.SetActive(true);
+            Correct.GetComponent<Animator>().SetTrigger("CorrectTrigger");
+        }
+         else
         {
             var team = ServiceProvider.TeamManager.GetActiveTeam();
             team.UpdateScore(-questionPoint);
             var source  = GetComponent<AudioSource>();
             source.clip = falseSound;
             source.Play();
+            Wrong.SetActive(true);
+            Wrong.GetComponent<Animator>().SetTrigger("WrongTrigger");
         }
+
+    }
+
+    public void OnTruePressed()
+    {
+        var questionId = 1;
+        if(trueQuestionId == questionId)
+        {
+            var team = ServiceProvider.TeamManager.GetActiveTeam();
+            team.UpdateScore(questionPoint);
+            var source  = GetComponent<AudioSource>();
+            source.clip = trueSound;
+            source.Play();
+            Correct.SetActive(true);
+            Correct.GetComponent<Animator>().SetTrigger("CorrectTrigger");
+        }
+         else
+        {
+            var team = ServiceProvider.TeamManager.GetActiveTeam();
+            team.UpdateScore(-questionPoint);
+            var source  = GetComponent<AudioSource>();
+            source.clip = falseSound;
+            source.Play();
+            Wrong.SetActive(true);
+            Wrong.GetComponent<Animator>().SetTrigger("WrongTrigger");
+        }
+
+    }
+
+
+    public void AfterOnOptionPressed(){
         ServiceProvider.TeamManager.ChangeTeam();
+        ServiceProvider.ScoreManager.DecreaseCard();
+        card.DeactivateCard(); //ekranda bir şey kalıyorsa onları temizleriz
+        Close();
+    }
+
+    public void TimeFinished()
+    {
+        var team = ServiceProvider.TeamManager.GetActiveTeam();
+        team.UpdateScore(0);
+        var source  = GetComponent<AudioSource>();
+        source.clip = falseSound;
+        source.Play();
+        ServiceProvider.TeamManager.ChangeTeam();
+        card.DeactivateCard();
         Close();
     }
 

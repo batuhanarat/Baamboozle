@@ -21,8 +21,16 @@ public class AnimationControlEventManager : MonoBehaviour
          if (cardUI != null)
                cardUI.AfterChest3_Animation();
       }
-     public void AnimControlWrongOrTrue(){
+     public void AnimControlWrongOrTrue()
+     {
+      if( GetComponentInParent<MultipleQuestionPopUp>() != null )
+      {
         GetComponentInParent<MultipleQuestionPopUp>().AfterOnOptionPressed();
+      } else if (GetComponentInParent<TrueFalseQuestionPopUp>() != null)
+      {
+         GetComponentInParent<TrueFalseQuestionPopUp>().AfterOnOptionPressed();
+      }
+
      }
 
 }

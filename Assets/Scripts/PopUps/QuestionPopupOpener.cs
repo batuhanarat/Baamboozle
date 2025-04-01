@@ -48,7 +48,7 @@ public class QuestionPopupOpener : PopupOpener
                 GetComponent<AudioSource>().clip =  popUpOpeningSound;
                 GetComponent<AudioSource>().Play();
                 OpenPopUpWithAnimation();  // eğer butonlu isterlerse
-            } 
+            }
             else
             {
                 counter++;
@@ -71,10 +71,12 @@ public class QuestionPopupOpener : PopupOpener
         popup.transform.SetParent(m_canvas.transform, false);
 
         RectTransform rectTransform = popup.GetComponent<RectTransform>();
-
+/*
         rectTransform.anchorMin = new Vector2(0.5f, 1f);
         rectTransform.anchorMax = new Vector2(0.5f, 1f);
         rectTransform.pivot = new Vector2(0.5f, 1f);
+
+        */
 
         // ⬇︎ Biraz daha AŞAĞIDAN başlasın (örneğin -500).
         rectTransform.anchoredPosition = new Vector2(0f, -500f);
@@ -113,7 +115,7 @@ public class QuestionPopupOpener : PopupOpener
     {
         Vector2 startPos = rectTransform.anchoredPosition;
         // ⬇︎ Yukarı gideceği bitiş noktası (örneğin -300). Dilersen -350 vs. de yapabilirsin.
-        Vector2 endPos = new Vector2(0f, -125f);
+        Vector2 endPos = new Vector2(0f, 0f);
 
         Vector3 scale = popupTransform.localScale;
 
@@ -169,11 +171,21 @@ public class QuestionPopupOpener : PopupOpener
             animator.enabled = true;
         }
         GetComponent<CardUI>().DeactivateCard();
+
+
+        popupTransform.transform.SetParent(ServiceProvider.AssetLibrary.GamePopupRoot);
+
     }
 
     public override void OpenPopup()
     {
-        var popup = Instantiate(newPopUpPrefab) as GameObject;
+        var rootTransform = ServiceProvider.AssetLibrary.GamePopupRoot;
+
+        if(rootTransform == null)
+        {
+            Debug.Log("bu transform boş kanka");
+        }
+        var popup = Instantiate(newPopUpPrefab);
         popup.SetActive(true);
         popup.transform.localScale = Vector3.zero;
         popup.transform.SetParent(m_canvas.transform, false);
@@ -183,12 +195,16 @@ public class QuestionPopupOpener : PopupOpener
             var playPopup = popup.GetComponent<SpecialPopUp>();
             playPopup.SetConfig(CardType, Config, CardUI);
             playPopup.Init();
+            playPopup.transform.SetParent(rootTransform);
+
         }
         else if(CardType == CardType.QUESTION)
         {
             var playPopup = popup.GetComponent<QuestionPopUp>();
             playPopup.SetData(Config, Question, CardUI);
             playPopup.Init();
+            playPopup.transform.SetParent(rootTransform);
+
         }
     }
 }

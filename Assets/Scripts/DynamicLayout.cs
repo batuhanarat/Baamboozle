@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class DynamicLayout : MonoBehaviour
 {
-
-
     [SerializeField] public GameObject animationFalan;
     [Header("UI Canvas")]
     public RectTransform panelColumn;
@@ -158,10 +156,18 @@ public class DynamicLayout : MonoBehaviour
     private void GetQuestions()
     {
         selectedQuestionConfig = questionCardDictionary[questionType];
-        List<MultipleQuestion> questions = ServiceProvider.QuestionManager.allQuestions;
+        ServiceProvider.QuestionManager.LoadQuestionsIfNeeded();
+
+        if(! ServiceProvider.QuestionManager.isEverythingAllright)
+        {
+            Debug.Log("Dynamic layoutta okuyamadı bir şekilde");
+            return;
+        }
+
+        List<Question> questions = ServiceProvider.QuestionManager.allQuestions;
         questionCount = GridSize - specialCount;
-        List<MultipleQuestion> selectedQuestions = new();
-        List<MultipleQuestion> availableQuestions = new List<MultipleQuestion>(questions);
+        List<Question> selectedQuestions = new();
+        List<Question> availableQuestions = new List<Question>(questions);
 
         while (selectedQuestions.Count < questionCount && availableQuestions.Count > 0)
         {
@@ -248,19 +254,19 @@ public class DynamicLayout : MonoBehaviour
         ClearBoard();
         Initialize();
         List<SpecialCardType> specials = GetSpecialsFromSettings();
-        InitSpecialCardDict();
-        Debug.Log("special card dict count " +specialCardDictionary.Count);
 
         if(CanHaveSpecial)
         {
+            InitSpecialCardDict();
             foreach(var special in specials)
             {
                 specialConfigs.Add(specialCardDictionary[special]);
                 allCards.Add(specialCardDictionary[special]);
             }
         }
+        Debug.Log("All cardsın size i speciallar eklenmiş  " +allCards.Count);
 
-        ServiceProvider.ScoreManager.SetData(GameSettings.CardSize);
+        ServiceProvider.ScoreManager.SetData(GameSettings.GetCardSize());
         InitQuestionCardDict();
         GetQuestions();
         Debug.Log("All cardsın size i questionlar eklenmiş  " +allCards.Count);

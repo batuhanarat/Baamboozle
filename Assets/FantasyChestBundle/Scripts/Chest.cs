@@ -30,7 +30,7 @@ namespace TreasureChest
 
         private void Awake()
         {
-            
+
 
             m_ChestAnimator = GetComponent<Animator>();
             ChestOpenVFX = transform.Find("ChestOpen_VFX").gameObject;
@@ -40,12 +40,14 @@ namespace TreasureChest
 
         public void Open()
         {
+            m_ChestAnimator = GetComponent<Animator>();
 
             m_ChestAnimator.SetTrigger("Open");
         }
 
         public void Close()
         {
+            m_ChestAnimator = GetComponent<Animator>();
 
             m_ChestAnimator.SetTrigger("Close");
 

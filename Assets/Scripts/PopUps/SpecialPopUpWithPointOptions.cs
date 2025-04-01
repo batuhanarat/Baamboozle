@@ -17,6 +17,7 @@ public class SpecialPopUpWithPointOptions : SpecialPopUp
             var pointAsString = button.GetComponentInChildren<TextMeshProUGUI>().text;
             button.onClick.AddListener(() => OnButtonPressed(pointAsString));
         }
+
     }
 
     public void OnButtonPressed(string point)
@@ -24,6 +25,7 @@ public class SpecialPopUpWithPointOptions : SpecialPopUp
         var cardWithOptions = specialCard as SpecialCardWithOptions;
         cardWithOptions.Execute(point);
         card.DeactivateCard();
+        ServiceProvider.ScoreManager.DecreaseCard();
         Close();
     }
 

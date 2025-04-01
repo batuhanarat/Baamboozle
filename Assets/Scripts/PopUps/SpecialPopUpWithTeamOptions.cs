@@ -25,6 +25,7 @@ public class SpecialPopUpWithTeamOptions : SpecialPopUp
             buttons.Add(button1);
             button1.onClick.AddListener(() => OnButtonPressed(team.teamID));
         }
+
     }
 
     public void OnButtonPressed(int teamID)
@@ -32,6 +33,8 @@ public class SpecialPopUpWithTeamOptions : SpecialPopUp
         var card1 = (SpecialCardWithOptions) specialCard;
         card1.Execute(teamID.ToString());
         card.DeactivateCard();
+        ServiceProvider.ScoreManager.DecreaseCard();
+
         Close();
     }
 

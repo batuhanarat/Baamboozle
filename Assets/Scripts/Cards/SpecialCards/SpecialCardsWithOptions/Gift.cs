@@ -25,7 +25,5 @@ public class Gift : SpecialCardWithOptions
         var randomlyChosenTeam =  teamManager.RandomlyChosenTeam;
         randomlyChosenTeam.UpdateScore(chosenPoint);
         ServiceProvider.TeamManager.ChangeTeam();
-
-
     }
 }

@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class ScoreManager : IProvidable
+public class ScoreManager :  MonoBehaviour, IProvidable
 {
 
-    public GameObject WinPanel;
-    public ScoreManager()
+    [SerializeField] public GameObject WinPanel;
+    public void Awake()
     {
         ServiceProvider.Register(this);
     }
@@ -33,9 +33,7 @@ public class ScoreManager : IProvidable
         Debug.Log("game finished");
         TeamUI winnerTeam = ServiceProvider.TeamManager.GetTopTeam();
         Debug.Log("winner " + winnerTeam.teamName);
-
-
-       // WinPanel.gameObject.SetActive(true);
+        Instantiate(WinPanel,ServiceProvider.AssetLibrary.GamePopupRoot);
     }
 
 }

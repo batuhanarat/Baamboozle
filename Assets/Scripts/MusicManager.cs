@@ -10,6 +10,8 @@ namespace Ricimi
     // This class handles updating the music UI widgets depending on the player's selection.
     public class MusicManager : MonoBehaviour
     {
+
+
         private Slider m_musicSlider;
         private GameObject m_musicButton;
 

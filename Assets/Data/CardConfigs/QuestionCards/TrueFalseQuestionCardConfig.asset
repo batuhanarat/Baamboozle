@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9087bcb6c9e64699a283994b737396f, type: 3}
   m_Name: TrueFalseQuestionCardConfig
   m_EditorClassIdentifier: 
-  PopUpPrefab: {fileID: 0}
+  PopUpPrefab: {fileID: 228574807113099297, guid: 4734719072814480c9ce43433a291695, type: 3}
   contentConfig: {fileID: 11400000, guid: 39fed53d11c7746fea8ee00ffdbd575d, type: 2}
   cardType: 0
