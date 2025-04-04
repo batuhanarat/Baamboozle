@@ -8,25 +8,40 @@ public class UpdatePanel : MonoBehaviour
 
     private const string LoggedKey = "logged_in";
 
-    public async void OnButtonPressed()
+    public void OnButtonPressed()
     {
         var code =  inputField.text;
         errorText.color = Color.yellow;
         errorText.text = "Yükleniyor";
-        ServiceProvider.QuestionManager.DeletePrefsAndLoadQuestions(LoggedSuccessfull,HandleError);
+        ServiceProvider.QuestionManager.UpdateQuestions(code);
     }
 
-    public void HandleError()
+    public void ShowError(string message)
     {
-        errorText.color = Color.red;
-        errorText.text = "Baglantı Sağlanamadı";
+        if (errorText != null)
+        {
+            errorText.text = message;
+            errorText.color = Color.red;
+            errorText.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("Error: " + message);
+        }
+    }
+    public void ShowSuccess(string message)
+    {
+        if (errorText != null)
+        {
+            errorText.text = message;
+            errorText.gameObject.SetActive(true);
+            errorText.color = Color.green; // Assuming you want to visually indicate success
+        }
+        else
+        {
+            Debug.Log("Success: " + message);
+        }
     }
 
-    public void LoggedSuccessfull()
-    {
-        PlayerPrefs.SetInt(LoggedKey,1);
-        PlayerPrefs.Save();
-        gameObject.SetActive(false);
-    }
 
 }

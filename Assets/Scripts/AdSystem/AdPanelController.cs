@@ -22,7 +22,7 @@ public class AdPanelController : MonoBehaviour
 
     public void Start()
     {
-        TryShowAdd();
+       // TryShowAdd();
     }
 
     public void TryShowAdd()

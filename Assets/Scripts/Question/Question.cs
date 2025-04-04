@@ -7,5 +7,5 @@ public class Question
     public string[] answersText;
     public int correctAnswerId;
     public bool hasImage;
-    public int imageId;
+    public string imagePath;
 }

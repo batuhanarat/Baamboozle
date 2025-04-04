@@ -38,10 +38,13 @@ public class QuestionPopupOpener : PopupOpener
     {
         if(CardType == CardType.QUESTION)
         {
+
             OpenPopup();
         }
         else
         {
+
+
             /*
             if(counter == 1)
             {

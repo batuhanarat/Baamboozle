@@ -21,8 +21,6 @@ public class TrueFalseQuestionPopUp : QuestionPopUp
     [SerializeField] public GameObject Correct;
     [SerializeField] public GameObject Wrong;
     private Color originalOptionColor = new Color(1f, 1f, 1f, 1f); // beyaz (varsayılan)
-    private bool HasImage = false;
-    [SerializeField] private Sprite sprite;
 
     [SerializeField] private GameObject normalTımer;
     [SerializeField] private GameObject timerForImage;
@@ -89,8 +87,10 @@ public class TrueFalseQuestionPopUp : QuestionPopUp
     private void SetQuestion(Question question)
     {
         trueFalseQuestion = question;
-        if(HasImage)
+        if(question.hasImage)
         {
+            Texture2D questionImage = GetComponent<QuestionManager>().GetQuestionImage(question);
+
             normalTımer.SetActive(false);
             timerForImage.SetActive(true);
 
@@ -101,9 +101,15 @@ public class TrueFalseQuestionPopUp : QuestionPopUp
             currentPointText = pointTextWithImage;
 
             reelImagego.SetActive(true);
-            reelImage.sprite=sprite;
+            Sprite sprite = Sprite.Create(
+                questionImage,
+                new Rect(0, 0, questionImage.width, questionImage.height),
+                new Vector2(0.5f, 0.5f)
+            );
 
-        } else
+            // Assign the sprite to your UI Image component
+            reelImage.sprite = sprite;
+        }
         {
             currentQuestionText =  questionText;
             currentPointText = pointText;
@@ -112,8 +118,7 @@ public class TrueFalseQuestionPopUp : QuestionPopUp
         currentPointText.text = questionConfig.point.ToString() + " puan";
         trueQuestionId = trueFalseQuestion.correctAnswerId;
 
-        //hasimage ı burada al
-        //image ı da burada al
+
 
         if (timerEnabled) StartTimer();
         else GetComponentInChildren<Clock>().gameObject.SetActive(false);
@@ -196,6 +201,7 @@ public class TrueFalseQuestionPopUp : QuestionPopUp
     public void TimeFinished()
     {
         var team = ServiceProvider.TeamManager.GetActiveTeam();
+        ServiceProvider.ScoreManager.DecreaseCard();
         team.UpdateScore(0);
         var source  = GetComponent<AudioSource>();
         source.clip = falseSound;

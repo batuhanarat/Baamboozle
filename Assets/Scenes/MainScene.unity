@@ -1653,6 +1653,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659856066}
   m_CullTransparentMesh: 0
+--- !u!1 &903436929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 903436930}
+  - component: {fileID: 903436931}
+  m_Layer: 0
+  m_Name: QuestionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &903436930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903436929}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &903436931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903436929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5c23a24a2924a41b0b692e881f9bea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loginPanel: {fileID: 481140736}
+  updatePanel: {fileID: 0}
+  allQuestions: []
 --- !u!1 &935462095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,8 +2606,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "(Oyun kodunuz panelden oyun olu\u015Fturulduktan sonra verilir)"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d107be71fbec543f9a7111d1b9870780, type: 2}
-  m_sharedMaterial: {fileID: 2889090923172615060, guid: d107be71fbec543f9a7111d1b9870780, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7a73530b95fd4434793b9a2c490b524b, type: 2}
+  m_sharedMaterial: {fileID: 6141547406683384421, guid: 7a73530b95fd4434793b9a2c490b524b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2584,7 +2631,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43.7
+  m_fontSize: 60
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2729,7 +2776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1257491059
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2894,7 +2941,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 481140740}
         m_TargetAssemblyTypeName: LoginPanel, Assembly-CSharp
-        m_MethodName: OnButtonPressedOfflineTest
+        m_MethodName: OnButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5108,3 +5155,4 @@ SceneRoots:
   - {fileID: 1576020677}
   - {fileID: 1026856749}
   - {fileID: 361244615}
+  - {fileID: 903436930}

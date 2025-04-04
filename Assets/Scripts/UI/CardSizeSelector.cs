@@ -29,27 +29,38 @@ public class CardSizeSelector : MonoBehaviour, IProvidable
 
     void Start()
     {
-        foreach (Toggle toggle in toggleGroup.GetComponentsInChildren<Toggle>())
+        foreach (Toggle toggle in toggleGroup.GetComponentsInChildren<Toggle>(true))
         {
+            var count =  toggle.GetComponentInChildren<TextMeshProUGUI>().text;
+            toggle.gameObject.SetActive(true);
+            int countInt = int.Parse(count);
             toggle.onValueChanged.AddListener((isOn) => OnToggleValueChanged(toggle, isOn));
         }
+       ChangeCardSize(4);
     }
 
     public void ChangeCardSize(int teamSize)
     {
-        GameSettings.TotalQuestionCount = 100;
+        foreach (Toggle toggle in toggleGroup.GetComponentsInChildren<Toggle>(true))
+        {
+            toggle.gameObject.SetActive(true);
+        }
+
         var arraycard = cardSizeMapper[teamSize];
         List<TextMeshProUGUI> toogleList = new();
 
-        foreach (Toggle toggle in toggleGroup.GetComponentsInChildren<Toggle>())
+        foreach (Toggle toggle in toggleGroup.GetComponentsInChildren<Toggle>(true))
         {
             var textmesh =  toggle.GetComponentInChildren<TextMeshProUGUI>();
             toogleList.Add(textmesh);
         }
 
+         Debug.Log("toggle listÇ:" + toogleList.Count + "arrayCard : " + arraycard.Length);
+
+
         for(int i = 0 ; i< arraycard.Length ; i++)
         {
-            if(arraycard[i] < GameSettings.GetTotalQuestionCount())
+            if(arraycard[i] <= ServiceProvider.QuestionManager.allQuestions.Count)
             {
                 toogleList[i].text = arraycard[i].ToString();
             } else

@@ -86,7 +86,7 @@ public class ApiManager
         {
             string filePath = Path.Combine(Application.persistentDataPath, key);
             File.WriteAllText(filePath, jsonData);
-            await Task.CompletedTask; // WebGL için async tutarlılığı
+            await Task.CompletedTask;
         }
         catch (Exception e)
         {

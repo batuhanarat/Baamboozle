@@ -21,7 +21,6 @@ public class MultipleQuestionPopUp : QuestionPopUp
     [SerializeField] public GameObject Correct;
     [SerializeField] public GameObject Wrong;
     private Color originalOptionColor = new Color(1f, 1f, 1f, 1f); // beyaz (varsayılan)
-    private bool HasImage = false;
     [SerializeField] private Sprite sprite;
 
     [SerializeField] private GameObject normalTımer;
@@ -90,8 +89,9 @@ public class MultipleQuestionPopUp : QuestionPopUp
     private void SetQuestion(Question question)
     {
         multipleQuestion = question;
-        if(HasImage)
+        if(question.hasImage)
         {
+            Texture2D questionImage = ServiceProvider.QuestionManager.GetQuestionImage(question);
             normalTımer.SetActive(false);
             timerForImage.SetActive(true);
 
@@ -102,9 +102,17 @@ public class MultipleQuestionPopUp : QuestionPopUp
             currentPointText = pointTextWithImage;
 
             reelImagego.SetActive(true);
-            reelImage.sprite=sprite;
 
-        } else
+            Sprite sprite = Sprite.Create(
+                questionImage,
+                new Rect(0, 0, questionImage.width, questionImage.height),
+                new Vector2(0.5f, 0.5f)
+            );
+
+            // Assign the sprite to your UI Image component
+            reelImage.sprite = sprite;
+        }
+         else
         {
             currentQuestionText =  questionText;
             currentPointText = pointText;
@@ -113,18 +121,15 @@ public class MultipleQuestionPopUp : QuestionPopUp
         currentPointText.text = questionConfig.point.ToString() + " puan";
         trueQuestionId = multipleQuestion.correctAnswerId;
 
-        //hasimage ı burada al
-        //image ı da burada al
+
         options = new List<Button>();
         int optionCount = Mathf.Clamp(GameSettings.GetOptionCounts(), 2, 4); // 2, 3 veya 4 şık
 
-        if(optionCount < 4 || HasImage)
+        if(optionCount < 4 || question.hasImage)
         {
             buttonHolder.GetComponent<GridLayoutGroup>().constraint = GridLayoutGroup.Constraint.FixedRowCount;
             buttonHolder.GetComponent<GridLayoutGroup>().constraintCount = 1;
         }
-
-
 
 
         List<int> allOptionIndexes = new List<int> { 0, 1, 2, 3 };
@@ -208,6 +213,7 @@ public class MultipleQuestionPopUp : QuestionPopUp
     public void TimeFinished()
     {
         var team = ServiceProvider.TeamManager.GetActiveTeam();
+        ServiceProvider.ScoreManager.DecreaseCard();
         team.UpdateScore(0);
         var source  = GetComponent<AudioSource>();
         source.clip = falseSound;

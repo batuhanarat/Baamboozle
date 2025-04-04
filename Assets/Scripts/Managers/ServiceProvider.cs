@@ -27,7 +27,6 @@ public static class ServiceProvider
 
     private static void InitializeCoreServices()
     {
-        _ = new QuestionManager();
         _ = new TeamManager();
         _ = new SpecialItemFactory();
     }

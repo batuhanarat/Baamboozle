@@ -20,7 +20,7 @@ public class DynamicLayout : MonoBehaviour
 
     #region  Game Settings
 
-        [SerializeField] public QuestionType questionType;
+        private QuestionType questionType;
         [SerializeField] public bool CanHaveSpecial;
 
     #endregion
@@ -58,7 +58,6 @@ public class DynamicLayout : MonoBehaviour
         Dictionary<QuestionType, CardConfig> questionCardDictionary;
 
     #endregion
-
 
     #region Card Contents
         List<CardConfig> specialConfigs = new();
@@ -155,16 +154,22 @@ public class DynamicLayout : MonoBehaviour
 
     private void GetQuestions()
     {
-        selectedQuestionConfig = questionCardDictionary[questionType];
-        ServiceProvider.QuestionManager.LoadQuestionsIfNeeded();
+        List<Question> questions = ServiceProvider.QuestionManager.allQuestions;
+        int questionTypeNum = PlayerPrefs.GetInt("QuestionType", 0);
 
-        if(! ServiceProvider.QuestionManager.isEverythingAllright)
+        if(questionTypeNum == 0)
         {
-            Debug.Log("Dynamic layoutta okuyamadı bir şekilde");
-            return;
+            questionType = QuestionType.MULTIPLE_CHOICE;
+        } else if(questionTypeNum == 1)
+        {
+            questionType = QuestionType.TRUE_FALSE;
+        } else
+        {
+             questionType = QuestionType.SELF_VERIFY;
         }
 
-        List<Question> questions = ServiceProvider.QuestionManager.allQuestions;
+        selectedQuestionConfig = questionCardDictionary[questionType];
+
         questionCount = GridSize - specialCount;
         List<Question> selectedQuestions = new();
         List<Question> availableQuestions = new List<Question>(questions);
